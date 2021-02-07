@@ -34,19 +34,3 @@ struct ContentPreviewHelper {
         return recipes
     }
 }
-
-struct RecipeView: View {
-    var recipe: RecipeModel
-    var body: some View {
-        VStack(alignment: .leading) {
-            Text("\(recipe.name)")
-                .font(.headline)
-                .foregroundColor(Color.blue)
-                .bold()
-            Text("\(recipe.origin)")
-                .font(.subheadline)
-                .foregroundColor(Color.purple)
-                .italic()
-        }
-    }
-}
