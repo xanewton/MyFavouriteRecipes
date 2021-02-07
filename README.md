@@ -16,6 +16,8 @@ eBook source code available at [github](https://github.com/PacktPublishing/Learn
 
 
 ## References
+- Swift Documentation – [Classes and Structures](https://docs.swift.org/swift-book/LanguageGuide/ClassesAndStructures.html)
+
 
 
 
