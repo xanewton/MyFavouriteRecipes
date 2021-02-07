@@ -33,8 +33,9 @@ struct RecipeView: View {
 
 struct RecipeView_Previews: PreviewProvider {
     static var previews: some View {
-        List {
-            RecipeView(recipe: RecipeModel(id: UUID(), name: "Italian Pizza Chicken", origin: "Italian", countryCode: "IT"))
+        let mockRecipes = Helper.mockRecipes()
+        return List(mockRecipes, id: \.id) { recipe in
+            RecipeView(recipe: recipe)
         }
     }
 }
