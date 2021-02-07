@@ -16,10 +16,7 @@ struct RecipeView: View {
                     .font(.headline)
                     .foregroundColor(Color.blue)
                     .bold()
-                Text("\(recipe.origin)")
-                    .font(.subheadline)
-                    .foregroundColor(Color.purple)
-                    .italic()
+                Image(recipe.countryCode)
             }
             VStack(alignment: .trailing, spacing: 10) {
                 Button(action: {
@@ -36,7 +33,7 @@ struct RecipeView: View {
 struct RecipeView_Previews: PreviewProvider {
     static var previews: some View {
         List {
-            RecipeView(recipe: RecipeModel(id: UUID(), name: "Italian Pizza Chicken", origin: "Italian"))
+            RecipeView(recipe: RecipeModel(id: UUID(), name: "Italian Pizza Chicken", origin: "Italian", countryCode: "IT"))
         }
     }
 }

@@ -31,10 +31,10 @@ struct ContentView_Previews: PreviewProvider {
 struct ContentPreviewHelper {
     static func mockRecipes() -> [RecipeModel] {
         var recipes = [RecipeModel]()
-        recipes.append(RecipeModel(id: UUID(), name: "Italian Pizza Chicken", origin: "Italian"))
-        recipes.append(RecipeModel(id: UUID(), name: "Greek Pasta Bake", origin: "Greek"))
-        recipes.append(RecipeModel(id: UUID(), name: "Hearty Parsnip Soup", origin: "British"))
-        recipes.append(RecipeModel(id: UUID(), name: "Honey & Soy Salmon", origin: "Chinese"))
+        recipes.append(RecipeModel(id: UUID(), name: "Italian Pizza Chicken", origin: "Italian", countryCode: "IT"))
+        recipes.append(RecipeModel(id: UUID(), name: "Greek Pasta Bake", origin: "Greek", countryCode: "GR"))
+        recipes.append(RecipeModel(id: UUID(), name: "Hearty Parsnip Soup", origin: "British", countryCode: "GB"))
+        recipes.append(RecipeModel(id: UUID(), name: "Honey & Soy Salmon", origin: "Chinese", countryCode: "CN"))
         return recipes
     }
 }
