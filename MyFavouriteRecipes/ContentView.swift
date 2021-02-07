@@ -15,8 +15,12 @@ struct ContentView: View {
                 VStack {
                     Text("\(recipe.name)")
                         .font(.headline)
+                        .foregroundColor(Color.blue)
+                        .bold()
                     Text("\(recipe.origin)")
                         .font(.subheadline)
+                        .foregroundColor(Color.purple)
+                        .italic()
                 }
             }
         }
