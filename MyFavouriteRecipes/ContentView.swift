@@ -12,7 +12,12 @@ struct ContentView: View {
     var body: some View {
             VStack {
                 List(recipeNames, id: \.self) { name in
-                    Text("\(name)")
+                    VStack {
+                        Text("\(name)")
+                            .font(.headline)
+                        Text("\(name)")
+                            .font(.subheadline)
+                    }
                 }
             }
         }
