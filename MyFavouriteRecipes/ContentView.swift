@@ -10,17 +10,17 @@ import SwiftUI
 struct ContentView: View {
     var recipeNames = [String]()
     var body: some View {
-            VStack {
-                List(recipeNames, id: \.self) { name in
-                    VStack {
-                        Text("\(name)")
-                            .font(.headline)
-                        Text("\(name)")
-                            .font(.subheadline)
-                    }
+        VStack {
+            List(recipeNames, id: \.self) { name in
+                VStack {
+                    Text("\(name)")
+                        .font(.headline)
+                    Text("\(name)")
+                        .font(.subheadline)
                 }
             }
         }
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
