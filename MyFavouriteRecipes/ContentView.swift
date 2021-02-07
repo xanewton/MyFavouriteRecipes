@@ -12,16 +12,7 @@ struct ContentView: View {
     var body: some View {
         VStack(alignment: .leading) {
             List(recipes, id: \.id) { recipe in
-                VStack {
-                    Text("\(recipe.name)")
-                        .font(.headline)
-                        .foregroundColor(Color.blue)
-                        .bold()
-                    Text("\(recipe.origin)")
-                        .font(.subheadline)
-                        .foregroundColor(Color.purple)
-                        .italic()
-                }
+                RecipeView(recipe: recipe)
             }
         }
     }
@@ -41,5 +32,21 @@ struct ContentPreviewHelper {
         recipes.append(RecipeModel(id: UUID(), name: "Hearty Parsnip Soup", origin: "British"))
         recipes.append(RecipeModel(id: UUID(), name: "Honey & Soy Salmon", origin: "Chinese"))
         return recipes
+    }
+}
+
+struct RecipeView: View {
+    var recipe: RecipeModel
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text("\(recipe.name)")
+                .font(.headline)
+                .foregroundColor(Color.blue)
+                .bold()
+            Text("\(recipe.origin)")
+                .font(.subheadline)
+                .foregroundColor(Color.purple)
+                .italic()
+        }
     }
 }
