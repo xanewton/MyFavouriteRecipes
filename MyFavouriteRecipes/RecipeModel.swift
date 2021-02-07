@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RecipeModel: Identifiable, Hashable {
+struct RecipeModel: Identifiable, Codable {
     var id = UUID()
     var name = ""
     var origin = ""
