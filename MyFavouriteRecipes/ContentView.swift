@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    #if DEBUG
+    var recipes = ContentPreviewHelper.mockRecipes()
+    #else
     var recipes = [RecipeModel]()
+    #endif
     var body: some View {
         VStack(alignment: .leading) {
             List(recipes, id: \.id) { recipe in
