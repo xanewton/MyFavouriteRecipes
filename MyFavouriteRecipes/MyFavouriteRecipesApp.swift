@@ -13,7 +13,8 @@ struct MyFavouriteRecipesApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView().environmentObject(appData)
+            ContentView()
+                .environmentObject(appData)
         }
     }
 }

@@ -10,6 +10,7 @@ import SwiftUI
 struct RecipeDetailView: View {
     @State var recipe: RecipeModel!
     @State private var viewIndex = 0
+    @EnvironmentObject var appData: AppData
     
     private var isFavourite: Bool {
         return Helper.getFavourites().contains(where: {($0.name == recipe.name)})
@@ -29,14 +30,16 @@ struct RecipeDetailView: View {
                 Text("\(recipe.name)")
                     .font(.title)
                     .padding(.leading, 10)
+                    .foregroundColor(appData.fontColor)
                             
                 // Favourites Button
                 Button(action: {
                     Helper.addRemoveFavourite(recipe: self.recipe)
-                        self.recipe.favourite.toggle()
-                        }) {
+                    appData.fontColor = self.isFavourite ? .orange : .black
+                    self.recipe.favourite.toggle()
+                }) {
                     Image(systemName: isFavourite ? "star.fill" : "star")
-                    }
+                }
             }
                         
             // Recipe origin

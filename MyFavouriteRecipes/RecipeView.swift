@@ -9,12 +9,14 @@ import SwiftUI
 
 struct RecipeView: View {
     @State var recipe = RecipeModel()
+    @EnvironmentObject var appData: AppData
+    
     var body: some View {
         Group {
             VStack(alignment: .leading) {
                 Text("\(recipe.name)")
                     .font(.headline)
-                    .foregroundColor(Color.blue)
+                    .foregroundColor(appData.fontColor)
                     .bold()
                 Image(recipe.countryCode)
             }
