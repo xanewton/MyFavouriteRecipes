@@ -50,3 +50,8 @@ struct ContentView_Previews: PreviewProvider {
         ContentView(recipes: Helper.mockRecipes())
     }
 }
+
+
+class AppData: ObservableObject {
+    @Published var fontColor = Color.black
+}

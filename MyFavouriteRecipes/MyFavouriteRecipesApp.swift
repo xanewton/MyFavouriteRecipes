@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct MyFavouriteRecipesApp: App {
+    let appData = AppData()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(appData)
         }
     }
 }
