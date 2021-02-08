@@ -28,18 +28,19 @@ struct ContentView: View {
                         List(recipes, id: \.id) { recipe in
                             NavigationLink(destination: RecipeDetailView(recipe: recipe)) {
                                 RecipeView(recipe: recipe)
+                                    .navigationBarTitle(Text("Recipes"))
                             }
                         }
                     } else if viewIndex == 1 {
                         List(Helper.getFavourites(), id: \.id) { recipe in
                             NavigationLink(destination: RecipeDetailView(recipe: recipe)) {
                                 RecipeView(recipe: recipe)
+                                    .navigationBarTitle(Text("Favourites"))
                             }
                         }
                     }
                 }
             }
-            .navigationBarTitle(Text("My Favourite Recipes"))
         }
     }
 }
