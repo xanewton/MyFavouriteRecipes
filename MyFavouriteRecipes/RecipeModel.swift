@@ -13,4 +13,6 @@ struct RecipeModel: Identifiable, Codable {
     var origin = ""
     var favourite = false
     var countryCode = ""
+    var ingredients = [String]()
+    var recipe = ""
 }
