@@ -18,6 +18,8 @@ eBook source code available at [github](https://github.com/PacktPublishing/Learn
 ## References
 - Swift Documentation – [Classes and Structures](https://docs.swift.org/swift-book/LanguageGuide/ClassesAndStructures.html)
 - [SF Symbols](https://developer.apple.com/design/human-interface-guidelines/sf-symbols/overview/)
+- [SwiftUI Navigation View](https://developer.apple.com/documentation/swiftui/navigationview)
+- [SwiftUI Environment Object](https://developer.apple.com/documentation/swiftui/environmentobject)
 
 
 
