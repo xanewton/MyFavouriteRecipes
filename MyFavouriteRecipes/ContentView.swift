@@ -16,6 +16,7 @@ struct ContentView: View {
     #endif
      */
     @State private var viewIndex = 0
+    @State private var showAddRecipe = false
     @EnvironmentObject var appData: AppData
     
     var body: some View {
@@ -44,6 +45,16 @@ struct ContentView: View {
                     }
                 }
             }
+            .navigationBarItems(trailing:
+                Button(action: {
+                    self.showAddRecipe.toggle()
+                }) {
+                Image(systemName: "plus")
+                    .renderingMode(.original)
+                }.sheet(isPresented: $showAddRecipe) {
+                    AddRecipeView().environmentObject(self.appData)
+                }
+            )
         }
     }
 }
