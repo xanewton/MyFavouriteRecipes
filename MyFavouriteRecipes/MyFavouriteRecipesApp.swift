@@ -10,6 +10,9 @@ import SwiftUI
 @main
 struct MyFavouriteRecipesApp: App {
     let appData = AppData()
+    init() {
+        appData.recipes = Helper.mockRecipes()
+    }
     
     var body: some Scene {
         WindowGroup {

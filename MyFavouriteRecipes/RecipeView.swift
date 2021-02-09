@@ -24,6 +24,8 @@ struct RecipeView: View {
                 Button(action: {
                     Helper.addRemoveFavourite(recipe: self.recipe)
                     self.recipe.favourite.toggle()
+                    self.appData.updateRecipe(recipe: self.recipe)
+                    //self.appData.updateRecipeFavorite(recipe: self.recipe)
                 }) {
                     Image(systemName: Helper.isFavourite(name: recipe.name) ? "star.fill" : "star")
                 }

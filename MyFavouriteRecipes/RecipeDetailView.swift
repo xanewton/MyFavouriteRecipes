@@ -37,6 +37,7 @@ struct RecipeDetailView: View {
                     Helper.addRemoveFavourite(recipe: self.recipe)
                     appData.fontColor = self.isFavourite ? .orange : .black
                     self.recipe.favourite.toggle()
+                    self.appData.updateRecipe(recipe: self.recipe)
                 }) {
                     Image(systemName: isFavourite ? "star.fill" : "star")
                 }

@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    /*
     #if DEBUG
     var recipes = Helper.mockRecipes()
     #else
     var recipes = [RecipeModel]()
     #endif
+     */
     @State private var viewIndex = 0
+    @EnvironmentObject var appData: AppData
     
     var body: some View {
         NavigationView {
@@ -25,14 +28,14 @@ struct ContentView: View {
                     }.pickerStyle(SegmentedPickerStyle())
                     
                     if viewIndex == 0 {
-                        List(recipes, id: \.id) { recipe in
+                        List(appData.recipes, id: \.id) { recipe in
                             NavigationLink(destination: RecipeDetailView(recipe: recipe)) {
                                 RecipeView(recipe: recipe)
                                     .navigationBarTitle(Text("Recipes"))
                             }
                         }
                     } else if viewIndex == 1 {
-                        List(Helper.getFavourites(), id: \.id) { recipe in
+                        List(appData.favourites, id: \.id) { recipe in
                             NavigationLink(destination: RecipeDetailView(recipe: recipe)) {
                                 RecipeView(recipe: recipe)
                                     .navigationBarTitle(Text("Favourites"))
@@ -46,12 +49,32 @@ struct ContentView: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
+    static let appData = AppData()
+    
     static var previews: some View {
-        ContentView(recipes: Helper.mockRecipes())
+        appData.recipes = Helper.mockRecipes()
+        return ContentView().environmentObject(appData)
     }
 }
 
 
 class AppData: ObservableObject {
     @Published var fontColor = Color.black
+    @Published var recipes = [RecipeModel]()
+    var favourites: [RecipeModel] {
+        return recipes.filter({ $0.favourite == true })
+    }
+
+    func updateRecipe(recipe: RecipeModel) {
+        recipes = recipes.filter( { $0.id != recipe.id } )
+        recipes.append(recipe)
+    }
+    
+    /*func updateRecipeFavorite(recipe: RecipeModel) {
+        for item in recipes {
+            if item.id == recipe.id {
+                item.favourite = recipe.favourite
+            }
+        }
+    }*/
 }
