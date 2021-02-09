@@ -12,8 +12,26 @@ struct AddRecipeView: View {
     @State internal var ingredient: String = ""
     @State internal var ingredients = [String]()
     
+    @State internal var showingImagePicker = false
+    @State private var libraryImage: UIImage?
+    
     var body: some View {
         Form {
+            Button(action: {
+                self.showingImagePicker.toggle()
+            }) {
+                Image(uiImage: self.libraryImage ?? (UIImage(named: "placeholder-add-image") ?? UIImage()))
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .clipShape(Circle())
+                    .overlay(Circle().stroke(Color.purple, lineWidth: 3).shadow(radius: 10))
+                    .frame(maxWidth: .infinity, maxHeight: 230)
+                    .padding(6)
+            }
+            .sheet(isPresented: $showingImagePicker) {
+                ImagePicker(image: self.$libraryImage)
+            }.buttonStyle(PlainButtonStyle())
+            
             Section(header: Text("Add Recipe Name:")) {
                 TextField("enter recipe name", text: $recipeName)
             }
