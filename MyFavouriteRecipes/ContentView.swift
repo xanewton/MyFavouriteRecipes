@@ -18,6 +18,7 @@ struct ContentView: View {
     @State private var viewIndex = 0
     @State private var showAddRecipe = false
     @EnvironmentObject var appData: AppData
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         NavigationView {
@@ -49,8 +50,14 @@ struct ContentView: View {
                 Button(action: {
                     self.showAddRecipe.toggle()
                 }) {
-                Image(systemName: "plus")
-                    .renderingMode(.original)
+                if colorScheme == .dark {
+                    Image(systemName: "plus")
+                        .renderingMode(.original)
+                        .colorInvert()
+                } else {
+                    Image(systemName: "plus")
+                        .renderingMode(.original)
+                }
                 }.sheet(isPresented: $showAddRecipe) {
                     AddRecipeView().environmentObject(self.appData)
                 }
