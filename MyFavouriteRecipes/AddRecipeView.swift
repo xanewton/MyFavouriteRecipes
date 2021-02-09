@@ -12,6 +12,7 @@ struct AddRecipeView: View {
     @State internal var ingredient: String = ""
     @State internal var ingredients = [String]()
     
+    @State internal var recipeDetails: String = ""
     @State internal var showingImagePicker = false
     @State private var libraryImage: UIImage?
     
@@ -39,7 +40,6 @@ struct AddRecipeView: View {
                 TextField("enter ingredient name", text: $ingredient)
                     .modifier(AddButton(text: $ingredient, ingredients: $ingredients))
             }
-            
             if ingredients.count > 0 {
                 Section(header: Text("Current Ingredients:")) {
                     List(ingredients, id: \.self) { item in
@@ -54,7 +54,12 @@ struct AddRecipeView: View {
                     }
                 }
             }
+            Section(header: Text("Details")) {
+                TextView(text: $recipeDetails)
+                    .frame(height: 220)
+            }
         }
+        .navigationBarTitle("Add Recipe")
     }
 }
 
@@ -84,6 +89,6 @@ struct AddButton: ViewModifier {
 struct AddRecipeView_Previews: PreviewProvider {
     static var previews: some View {
         let recipe = Helper.mockRecipes().first!
-        return AddRecipeView(recipeName: recipe.name, ingredient: recipe.ingredients.first!, ingredients: recipe.ingredients)
+        return AddRecipeView(recipeName: recipe.name, ingredient: recipe.ingredients.first ?? "", ingredients: recipe.ingredients, recipeDetails: recipe.recipe)
     }
 }
