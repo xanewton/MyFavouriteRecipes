@@ -18,6 +18,9 @@ struct AddRecipeView: View {
     @State private var selectedCountry = 0
     internal var countries = Helper.getCountries()
     
+    @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var appData: AppData
+    
     var body: some View {
         NavigationView {
             Form {
@@ -70,7 +73,36 @@ struct AddRecipeView: View {
                 }
             } // Closing Form Brace
             .navigationBarTitle("Add Recipe")
+            .navigationBarItems(trailing:
+                Button(action: {
+                    self.saveRecipe()
+                    self.presentationMode.wrappedValue.dismiss()
+                }) {
+                    Text("Save")
+                }
+            )
         }
+    }
+    
+    private func saveRecipe() {
+        var recipeImage = UIImage()
+        if let libImage = libraryImage {
+            recipeImage = libImage
+        }
+        let country = countries[selectedCountry]
+        
+        let newRecipe = RecipeModel(id: UUID(),
+                                    name: recipeName,
+                                    origin: country,
+                                    favourite: false,
+                                    countryCode: Helper.getCountryCode(country: country),
+                                    ingredients: ingredients,
+                                    recipe: recipeDetails,
+                                    imageData: recipeImage.jpegData(compressionQuality: 0.3) ?? Data())
+        
+        // Update Local Saved Data
+        appData.recipes.append(newRecipe)
+        Helper.saveRecipes(recipes: appData.recipes)
     }
 }
 

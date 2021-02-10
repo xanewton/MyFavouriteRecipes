@@ -18,7 +18,10 @@ struct RecipeView: View {
                     .font(.headline)
                     .foregroundColor(appData.fontColor)
                     .bold()
-                Image(recipe.countryCode)
+                //Image(recipe.countryCode)
+                Image(uiImage: recipe.image).resizable()
+                 .aspectRatio(contentMode: .fit)
+                 .frame(height: 30)
             }
             VStack(alignment: .trailing, spacing: 10) {
                 Button(action: {

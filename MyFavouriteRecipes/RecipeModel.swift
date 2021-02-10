@@ -5,7 +5,7 @@
 //  Created by newtan on 2021-02-07.
 //
 
-import Foundation
+import UIKit
 
 struct RecipeModel: Identifiable, Codable {
     var id = UUID()
@@ -15,4 +15,13 @@ struct RecipeModel: Identifiable, Codable {
     var countryCode = ""
     var ingredients = [String]()
     var recipe = ""
+    var imageData: Data?
+    var image: UIImage {
+        if let dataImage = UIImage(data: imageData ?? Data()) {
+            return dataImage
+        } else if let countryImage = UIImage(named: countryCode) {
+            return countryImage
+        }
+        return UIImage()
+    }
 }

@@ -9,27 +9,6 @@ import UIKit
 
 struct Helper {
     
-    static func saveRecipes(recipes: [RecipeModel]) {
-        let data = try! JSONEncoder().encode(recipes)
-        UserDefaults.standard.set(data, forKey: "recipes")
-    }
-        
-    // Gets List of Saved Recipes
-    static func getRecipes(filter: String = "") -> [RecipeModel] {
-                
-        if let data = UserDefaults.standard.data(forKey: "recipes") {
-            var array = try! JSONDecoder().decode([RecipeModel].self, from: data)
-            
-            // Apply filter
-            if filter != "" {
-                array = array.filter { $0.origin == filter }
-            }
-            
-            return array
-        }
-        return [RecipeModel]()
-    }
-    
     // Checks if recipe is already a Favourite
     static func isFavourite(name: String) -> Bool {
         return getFavourites().contains(where: {($0.name == name)})
@@ -68,6 +47,8 @@ struct Helper {
         recipies.append(RecipeModel(name: "Hearty Parsnip Soup", origin: "British", countryCode: "GB", ingredients: getMockIngredients(), recipe: getMockRecipe()))
         recipies.append(RecipeModel(name: "Honey & Soy Salmon", origin: "Chinese", countryCode: "CN", ingredients: getMockIngredients(), recipe: getMockRecipe()))
         
+        recipies.append(contentsOf: getRecipes())
+        
         return recipies
         
     }
@@ -85,6 +66,48 @@ struct Helper {
     
     static func getCountries() -> [String] {
         return ["Italy", "Greece", "UK", "China", "France", "USA", "Mexico", "Spain"]
+    }
+    
+    static func getCountryCode(country: String) -> String {
+        switch country {
+        case "Italy":
+            return "IT"
+        case "Greece":
+            return "GR"
+        case "UK":
+            return "GB"
+        case "China":
+            return "CN"
+        case "Mexico":
+            return "MX"
+        case "France":
+            return "FR"
+        case "USA":
+            return "US"
+        case "Spain":
+            return "ES"
+        default:
+            return ""
+        }
+    }
+    
+    // Add Recipe
+    static func saveRecipes(recipes: [RecipeModel]) {
+        let data = try! JSONEncoder().encode(recipes)
+        UserDefaults.standard.set(data, forKey: "recipes")
+    }
+
+    // Gets List of Saved Recipes
+    static func getRecipes(filter: String = "") -> [RecipeModel] {
+        if let data = UserDefaults.standard.data(forKey: "recipes") {
+            var array = try! JSONDecoder().decode([RecipeModel].self, from: data)
+            // Apply filter
+            if filter != "" {
+                array = array.filter { $0.origin == filter }
+            }
+            return array
+        }
+        return [RecipeModel]()
     }
 }
 

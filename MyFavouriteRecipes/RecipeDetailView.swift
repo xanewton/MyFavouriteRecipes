@@ -19,7 +19,7 @@ struct RecipeDetailView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
             // Image (currently using flag)
-            Image(recipe.countryCode)
+            Image(uiImage: recipe.image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(maxWidth: .infinity, maxHeight: 200)

@@ -11,7 +11,7 @@ import SwiftUI
 struct MyFavouriteRecipesApp: App {
     let appData = AppData()
     init() {
-        appData.recipes = Helper.mockRecipes()
+        appData.recipes = Helper.getRecipes()
     }
     
     var body: some Scene {
