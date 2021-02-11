@@ -15,6 +15,10 @@ struct MapView: UIViewRepresentable {
     
     var annotations: [AnnotationPin]
     
+    func makeCoordinator() -> MapViewCoordinator{
+        MapViewCoordinator(self)
+    }
+    
     func makeUIView(context: Context) -> MKMapView {
         MKMapView(frame: .zero)
     }
@@ -26,6 +30,24 @@ struct MapView: UIViewRepresentable {
         view.setRegion(region, animated: true)
         
         view.addAnnotations(annotations)
+        view.delegate = context.coordinator
+    }
+    
+
+    class MapViewCoordinator: NSObject, MKMapViewDelegate {
+        var parent: MapView
+        
+        init(_ control: MapView) {
+            self.parent = control
+        }
+        
+        func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+            let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "customView")
+            annotationView.canShowCallout = true
+            
+            annotationView.image = UIImage(systemName: "book.fill")
+            return annotationView
+        }
     }
 }
 
