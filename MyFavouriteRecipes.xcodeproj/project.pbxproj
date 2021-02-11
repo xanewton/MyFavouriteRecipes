@@ -74,16 +74,13 @@
 		463F975B25D0822A00327EF8 /* MyFavouriteRecipes */ = {
 			isa = PBXGroup;
 			children = (
+				465DA2FE25D4BE6C00750394 /* Helpers */,
 				463F975C25D0822A00327EF8 /* MyFavouriteRecipesApp.swift */,
 				463F975E25D0822A00327EF8 /* ContentView.swift */,
 				463F977125D08E4800327EF8 /* RecipeModel.swift */,
 				463F977525D09A5300327EF8 /* RecipeView.swift */,
 				46D0203C25D1F0A800AF34F5 /* RecipeDetailView.swift */,
 				46F84E3525D342DA00CF7F3D /* AddRecipeView.swift */,
-				463F977B25D0A86400327EF8 /* Helper.swift */,
-				46F84E3A25D34FC900CF7F3D /* ImageHelper.swift */,
-				46F84E3D25D3540A00CF7F3D /* TextHelper.swift */,
-				465DA2FA25D4A7E200750394 /* NetworkHelper.swift */,
 				463F976025D0822B00327EF8 /* Assets.xcassets */,
 				463F976525D0822B00327EF8 /* Info.plist */,
 				463F976225D0822B00327EF8 /* Preview Content */,
@@ -97,6 +94,17 @@
 				463F976325D0822B00327EF8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		465DA2FE25D4BE6C00750394 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				463F977B25D0A86400327EF8 /* Helper.swift */,
+				46F84E3A25D34FC900CF7F3D /* ImageHelper.swift */,
+				46F84E3D25D3540A00CF7F3D /* TextHelper.swift */,
+				465DA2FA25D4A7E200750394 /* NetworkHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
