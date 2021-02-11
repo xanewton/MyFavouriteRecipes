@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RecipeMapView: View {
     var body: some View {
-        MapView(lat: 37.3327177, long: -122.0753671)
+        MapView(lat: 37.3327177, long: -122.0753671, annotations: Helper.getMockLocations())
     }
 }
 
