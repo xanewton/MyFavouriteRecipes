@@ -73,7 +73,12 @@ struct AddRecipeView: View {
                 }
             } // Closing Form Brace
             .navigationBarTitle("Add Recipe")
-            .navigationBarItems(trailing:
+            .navigationBarItems(leading:
+                Button(action: {
+                    self.getRandomImage()
+                }) {
+                    Text("Random Image")
+                },trailing:
                 Button(action: {
                     self.saveRecipe()
                     self.presentationMode.wrappedValue.dismiss()
@@ -103,6 +108,17 @@ struct AddRecipeView: View {
         // Update Local Saved Data
         appData.recipes.append(newRecipe)
         Helper.saveRecipes(recipes: appData.recipes)
+    }
+
+    private func getRandomImage() {
+        // The public open API (https://source.unsplash.com/) will generate a placeholder image based on the structure of the URL.
+        // https://source.unsplash.com/300x200/?food is a 300x200 size image categorized as food.
+        guard let url = URL(string: "https://source.unsplash.com/300x200/?food") else {
+            return
+        }
+        NetworkHelper.loadData(url: url) { (image) in
+            self.libraryImage = image
+        }
     }
 }
 
