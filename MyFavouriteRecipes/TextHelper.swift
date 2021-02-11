@@ -28,6 +28,10 @@ struct TestRepresentableView: UIViewRepresentable {
     func updateUIView(_ uiView: UITextView, context: Context) {
         uiView.text = text
     }
+    
+    static func dismantleUIView(_ uiView: UITextView, coordinator: TestRepresentableView.Coordinator) {
+        // code to to clean-up tear down once our UIView disapears
+    }
 
     class Coordinator : NSObject, UITextViewDelegate {
         var parent: TestRepresentableView

@@ -20,6 +20,12 @@ eBook source code available at [github](https://github.com/PacktPublishing/Learn
 - [SF Symbols](https://developer.apple.com/design/human-interface-guidelines/sf-symbols/overview/)
 - [SwiftUI Navigation View](https://developer.apple.com/documentation/swiftui/navigationview)
 - [SwiftUI Environment Object](https://developer.apple.com/documentation/swiftui/environmentobject)
+- [Delegate Design Patterns](https://developer.apple.com/documentation/swift/cocoa_design_patterns/using_delegates_to_customize_object_behavior)
+- [UITextView](https://developer.apple.com/documentation/uikit/uitextviewdelegate/1618630-textview)
+- [UITextView Delegate](https://developer.apple.com/documentation/uikit/uitextviewdelegate/1618599-textviewdidchange)
+- [UIPickerView Delegate](https://developer.apple.com/documentation/uikit/uipickerviewdelegate)
+- [UIViewRepresentable](https://developer.apple.com/documentation/swiftui/uiviewrepresentable)
+- [UIViewControllerRepresentable](https://developer.apple.com/documentation/swiftui/uiviewcontrollerrepresentable)
 
 
 

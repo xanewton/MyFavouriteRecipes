@@ -23,6 +23,7 @@ struct ImagePickerViewController: UIViewControllerRepresentable {
     }
     
     func updateUIViewController(_ uiViewController: UIImagePickerController, context: UIViewControllerRepresentableContext<ImagePickerViewController>) {
+        // That's right! It's empty. Due to the nature of how UIImagePickerController() works, there is no need to update the UI at any specific time.
     }
     
     func makeCoordinator() -> Coordinator {
