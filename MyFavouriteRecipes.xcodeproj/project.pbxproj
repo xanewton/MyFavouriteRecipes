@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4607EB6725D5ED4B0029726D /* RecipeMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4607EB6625D5ED4B0029726D /* RecipeMapView.swift */; };
+		4607EB6A25D5EDA70029726D /* MapKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4607EB6925D5EDA70029726D /* MapKitHelper.swift */; };
 		463F975D25D0822A00327EF8 /* MyFavouriteRecipesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463F975C25D0822A00327EF8 /* MyFavouriteRecipesApp.swift */; };
 		463F975F25D0822A00327EF8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463F975E25D0822A00327EF8 /* ContentView.swift */; };
 		463F976125D0822B00327EF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 463F976025D0822B00327EF8 /* Assets.xcassets */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4607EB6625D5ED4B0029726D /* RecipeMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeMapView.swift; sourceTree = "<group>"; };
+		4607EB6925D5EDA70029726D /* MapKitHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitHelper.swift; sourceTree = "<group>"; };
 		463F975925D0822A00327EF8 /* MyFavouriteRecipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFavouriteRecipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		463F975C25D0822A00327EF8 /* MyFavouriteRecipesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavouriteRecipesApp.swift; sourceTree = "<group>"; };
 		463F975E25D0822A00327EF8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,6 +85,7 @@
 				463F977525D09A5300327EF8 /* RecipeView.swift */,
 				46D0203C25D1F0A800AF34F5 /* RecipeDetailView.swift */,
 				46F84E3525D342DA00CF7F3D /* AddRecipeView.swift */,
+				4607EB6625D5ED4B0029726D /* RecipeMapView.swift */,
 				463F976025D0822B00327EF8 /* Assets.xcassets */,
 				463F976525D0822B00327EF8 /* Info.plist */,
 				463F976225D0822B00327EF8 /* Preview Content */,
@@ -103,6 +108,7 @@
 				46F84E3A25D34FC900CF7F3D /* ImageHelper.swift */,
 				46F84E3D25D3540A00CF7F3D /* TextHelper.swift */,
 				465DA2FA25D4A7E200750394 /* NetworkHelper.swift */,
+				4607EB6925D5EDA70029726D /* MapKitHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -179,7 +185,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				46F84E3625D342DA00CF7F3D /* AddRecipeView.swift in Sources */,
+				4607EB6725D5ED4B0029726D /* RecipeMapView.swift in Sources */,
 				463F975F25D0822A00327EF8 /* ContentView.swift in Sources */,
+				4607EB6A25D5EDA70029726D /* MapKitHelper.swift in Sources */,
 				465DA2FB25D4A7E200750394 /* NetworkHelper.swift in Sources */,
 				46D0203D25D1F0A800AF34F5 /* RecipeDetailView.swift in Sources */,
 				463F975D25D0822A00327EF8 /* MyFavouriteRecipesApp.swift in Sources */,
