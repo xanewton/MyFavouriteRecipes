@@ -33,10 +33,10 @@ struct Helper {
     // Gets list of mock data Recipes to be injected into our app.
     static func mockRecipes() -> [RecipeModel] {
         var recipies = [RecipeModel]()
-        recipies.append(RecipeModel(name: "Italian Pizza Chicken", origin: "Italian", countryCode: "IT", ingredients: getMockIngredients(), recipe: getMockRecipe()))
-        recipies.append(RecipeModel(name: "Greek Pasta Bake", origin: "Greek", countryCode: "GR", ingredients: getMockIngredients(), recipe: getMockRecipe()))
-        recipies.append(RecipeModel(name: "Hearty Parsnip Soup", origin: "British", countryCode: "GB", ingredients: getMockIngredients(), recipe: getMockRecipe()))
-        recipies.append(RecipeModel(name: "Honey & Soy Salmon", origin: "Chinese", countryCode: "CN", ingredients: getMockIngredients(), recipe: getMockRecipe()))
+        recipies.append(RecipeModel(name: "Italian Pizza Chicken", origin: "Italian", countryCode: "IT", ingredients: getMockIngredients(), recipe: getMockRecipe(), imageData: Data()))
+        recipies.append(RecipeModel(name: "Greek Pasta Bake", origin: "Greek", countryCode: "GR", ingredients: getMockIngredients(), recipe: getMockRecipe(), imageData: Data()))
+        recipies.append(RecipeModel(name: "Hearty Parsnip Soup", origin: "British", countryCode: "GB", ingredients: getMockIngredients(), recipe: getMockRecipe(), imageData: Data()))
+        recipies.append(RecipeModel(name: "Honey & Soy Salmon", origin: "Chinese", countryCode: "CN", ingredients: getMockIngredients(), recipe: getMockRecipe(), imageData: Data()))
         
         recipies.append(contentsOf: getRecipes())
         
@@ -93,7 +93,41 @@ struct Helper {
         return annotations
     }
     
+    private static func getCoordinates(country: String) -> CLLocationCoordinate2D {
+        switch country {
+            case "Italy":
+                return CLLocationCoordinate2D(latitude: 43.112221, longitude: 12.388889)
+            case "Greece":
+                return CLLocationCoordinate2D(latitude: 37.983810, longitude: 23.727539)
+            case "UK":
+                return CLLocationCoordinate2D(latitude: 53.483959, longitude: -2.244644)
+            case "China":
+                return CLLocationCoordinate2D(latitude: 31.224361, longitude: 121.469170)
+            case "France":
+                return CLLocationCoordinate2D(latitude: 48.864716, longitude: 2.349014)
+            case "USA":
+                return CLLocationCoordinate2D(latitude: 40.000000, longitude: -89.000000)
+            case "Mexico":
+                return CLLocationCoordinate2D(latitude: 19.451054, longitude: -99.125519)
+            case "Spain":
+                return CLLocationCoordinate2D(latitude: 41.383, longitude: 2.183)
+            default:
+                return CLLocationCoordinate2D(latitude: 37.6160179, longitude: -122.3946882)
+        }
+    }
     
+    static func getRecipeLocations() -> [AnnotationPin] {
+        var locations = [AnnotationPin]()
+        let recipes = getRecipes()
+        let countries = Set(recipes.map{$0.origin})
+        
+        for country in countries {
+            let count = recipes.filter {$0.origin == country }.count
+            let subtitle = count > 1 ? "\(count) Recipes" : "\(count) Recipe"
+            locations.append(AnnotationPin(title: country, subtitle: subtitle, coordinate: Helper.getCoordinates(country: country)))
+        }
+        return locations
+    }
     
     // Checks if recipe is already a Favourite
     static func isFavourite(name: String) -> Bool {
@@ -120,11 +154,5 @@ struct Helper {
         }
         return [RecipeModel]()
     }
-    
-    
-    
-    
-    
-    
 }
 

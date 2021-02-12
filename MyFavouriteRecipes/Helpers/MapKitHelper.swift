@@ -15,6 +15,9 @@ struct MapView: UIViewRepresentable {
     
     var annotations: [AnnotationPin]
     
+    @Binding var presentationMode: PresentationMode
+    @Binding var filter: String
+    
     func makeCoordinator() -> MapViewCoordinator{
         MapViewCoordinator(self)
     }
@@ -46,7 +49,17 @@ struct MapView: UIViewRepresentable {
             annotationView.canShowCallout = true
             
             annotationView.image = UIImage(systemName: "book.fill")
+            
+            let btn = UIButton(type: .infoDark)
+            annotationView.rightCalloutAccessoryView = btn
+            
             return annotationView
+        }
+        
+        // This delegate gets called whenever a UIControl item (UIButton, in our case) is tapped from inside a callout accessory.
+        func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+            parent.filter = (view.annotation?.title ?? "") ?? ""
+            parent.presentationMode.dismiss()
         }
     }
 }

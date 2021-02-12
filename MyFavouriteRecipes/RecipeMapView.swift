@@ -8,13 +8,32 @@
 import SwiftUI
 
 struct RecipeMapView: View {
+    
+    @ObservedObject var locationManager = MapLocationManager()
+    
+    @Binding var filter: String
+      
+    @Environment(\.presentationMode) var presentationMode
+    
+    var latitude: Double {
+      return locationManager.location?.coordinate.latitude ?? 0.0
+    }
+      
+    var longitude: Double {
+      return locationManager.location?.coordinate.longitude ?? 0.0
+    }
+    
+    
     var body: some View {
-        MapView(lat: 37.3327177, long: -122.0753671, annotations: Helper.getMockLocations())
+        NavigationView {
+            MapView(lat: latitude, long: longitude, annotations: Helper.getMockLocations(), presentationMode: presentationMode, filter: $filter)
+                .navigationBarTitle(Text("Recipes of the World!"))
+        }
     }
 }
 
 struct RecipeMapView_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeMapView()
+        RecipeMapView(filter: .constant(""))
     }
 }

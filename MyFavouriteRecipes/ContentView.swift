@@ -17,6 +17,10 @@ struct ContentView: View {
      */
     @State private var viewIndex = 0
     @State private var showAddRecipe = false
+    @State private var showMap = false
+    
+    @State private var filter: String = ""
+    
     @EnvironmentObject var appData: AppData
     @Environment(\.colorScheme) var colorScheme
     
@@ -30,7 +34,7 @@ struct ContentView: View {
                     }.pickerStyle(SegmentedPickerStyle())
                     
                     if viewIndex == 0 {
-                        List(appData.recipes, id: \.id) { recipe in
+                        List(appData.getRecipes(filter: filter), id: \.id) { recipe in
                             NavigationLink(destination: RecipeDetailView(recipe: recipe)) {
                                 RecipeView(recipe: recipe)
                                     .navigationBarTitle(Text("Recipes"))
@@ -46,39 +50,50 @@ struct ContentView: View {
                     }
                 }
             }
-            .navigationBarItems(trailing:
-                Button(action: {
-                    self.showAddRecipe.toggle()
-                }) {
-                if colorScheme == .dark {
-                    Image(systemName: "plus")
-                        .renderingMode(.original)
-                        .colorInvert()
-                } else {
-                    Image(systemName: "plus")
-                        .renderingMode(.original)
-                }
-                }.sheet(isPresented: $showAddRecipe) {
-                    AddRecipeView().environmentObject(self.appData)
-                }
+            .navigationBarItems(
+                leading: HStack {
+                    Button(action: {
+                      self.showMap.toggle()
+                    }) {
+                    Image(systemName: "map")
+                      .renderingMode(.original)
+                    }.sheet(isPresented: $showMap) {
+                      RecipeMapView(filter: self.$filter)
+                    }
+                    Button(action: {
+                        self.filter = ""
+                      }) {
+                        Image(systemName: "line.horizontal.3.decrease.circle")
+                          .renderingMode(.original)
+                      }
+                }, trailing:
+                    Button(action: {
+                        self.showAddRecipe.toggle()
+                    }) {
+                    if colorScheme == .dark {
+                        Image(systemName: "plus")
+                            .renderingMode(.original)
+                            .colorInvert()
+                    } else {
+                        Image(systemName: "plus")
+                            .renderingMode(.original)
+                    }
+                    }.sheet(isPresented: $showAddRecipe) {
+                        AddRecipeView().environmentObject(self.appData)
+                    }
             )
         }
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static let appData = AppData()
-    
-    static var previews: some View {
-        appData.recipes = Helper.mockRecipes()
-        return ContentView().environmentObject(appData)
+        .navigationViewStyle(DoubleColumnNavigationViewStyle())
+        .padding()
     }
 }
 
 
 class AppData: ObservableObject {
+
     @Published var fontColor = Color.black
     @Published var recipes = [RecipeModel]()
+
     var favourites: [RecipeModel] {
         return recipes.filter({ $0.favourite == true })
     }
@@ -88,11 +103,21 @@ class AppData: ObservableObject {
         recipes.append(recipe)
     }
     
-    /*func updateRecipeFavorite(recipe: RecipeModel) {
-        for item in recipes {
-            if item.id == recipe.id {
-                item.favourite = recipe.favourite
-            }
+    func getRecipes(filter: String) -> [RecipeModel] {
+        if filter != "" {
+            return recipes.filter ({ $0.origin == filter })
+        } else {
+            return recipes
         }
-    }*/
+    }
+}
+
+
+struct ContentView_Previews: PreviewProvider {
+    static let appData = AppData()
+    
+    static var previews: some View {
+        appData.recipes = Helper.mockRecipes()
+        return ContentView().environmentObject(appData)
+    }
 }

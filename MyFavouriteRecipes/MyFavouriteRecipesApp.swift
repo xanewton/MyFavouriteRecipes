@@ -11,11 +11,13 @@ import SwiftUI
 struct MyFavouriteRecipesApp: App {
     let appData = AppData()
     init() {
-        appData.recipes = Helper.getRecipes()
+        //appData.recipes = Helper.getRecipes()
+        appData.recipes = Helper.mockRecipes()
     }
     
     var body: some Scene {
         WindowGroup {
+            //RecipeMapView()
             ContentView()
                 .environmentObject(appData)
         }
