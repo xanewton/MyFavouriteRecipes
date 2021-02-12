@@ -26,6 +26,8 @@ eBook source code available at [github](https://github.com/PacktPublishing/Learn
 - [UIPickerView Delegate](https://developer.apple.com/documentation/uikit/uipickerviewdelegate)
 - [UIViewRepresentable](https://developer.apple.com/documentation/swiftui/uiviewrepresentable)
 - [UIViewControllerRepresentable](https://developer.apple.com/documentation/swiftui/uiviewcontrollerrepresentable)
+- [MapKit](https://developer.apple.com/documentation/mapkit/mkmapview)
+- [CoreLocation](https://developer.apple.com/documentation/corelocation/)
 
 
 
