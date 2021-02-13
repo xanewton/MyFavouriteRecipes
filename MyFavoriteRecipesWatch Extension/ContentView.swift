@@ -8,14 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
-    var recipes = [RecipeModel]()
+    //var recipes = [RecipeModel]()
+    var recipes: [RecipeModel] = Helper.mockRecipes()
     
     var body: some View {
         VStack {
             Text("Recipes")
                 .font(.headline)
             List(recipes, id: \.id) { recipe in
-                Text("\(recipe.name)")
+                NavigationLink(destination: IngredientsView(ingredients: recipe.ingredients, recipeName: recipe.name)) {
+                    Text("\(recipe.name)")
+                }
             }
         }
     }
