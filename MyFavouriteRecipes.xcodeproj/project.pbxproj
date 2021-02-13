@@ -28,6 +28,7 @@
 		465EBB3C25D865950034ADF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 465EBB3B25D865950034ADF0 /* Assets.xcassets */; };
 		465EBB3F25D865950034ADF0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 465EBB3E25D865950034ADF0 /* Preview Assets.xcassets */; };
 		465EBB4325D865950034ADF0 /* MyFavoriteRecipesWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 465EBB2725D865940034ADF0 /* MyFavoriteRecipesWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		465EBB4F25D8698E0034ADF0 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463F977125D08E4800327EF8 /* RecipeModel.swift */; };
 		4682A81625D75B3700063F63 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4682A81525D75B3700063F63 /* ContentView.swift */; };
 		4682A81925D75B7F00063F63 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4682A81825D75B7F00063F63 /* WelcomeView.swift */; };
 		46D0203D25D1F0A800AF34F5 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D0203C25D1F0A800AF34F5 /* RecipeDetailView.swift */; };
@@ -378,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				465EBB3625D865950034ADF0 /* ContentView.swift in Sources */,
+				465EBB4F25D8698E0034ADF0 /* RecipeModel.swift in Sources */,
 				465EBB3825D865950034ADF0 /* MyFavouriteRecipesApp.swift in Sources */,
 				465EBB3A25D865950034ADF0 /* ComplicationController.swift in Sources */,
 			);

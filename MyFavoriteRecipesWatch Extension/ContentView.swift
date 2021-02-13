@@ -8,9 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    var recipes = [RecipeModel]()
+    
     var body: some View {
-        Text("Hello, World!")
-            .padding()
+        VStack {
+            Text("Recipes")
+                .font(.headline)
+            List(recipes, id: \.id) { recipe in
+                Text("\(recipe.name)")
+            }
+        }
     }
 }
 
