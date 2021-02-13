@@ -33,12 +33,18 @@ struct Helper {
     // Gets list of mock data Recipes to be injected into our app.
     static func mockRecipes() -> [RecipeModel] {
         var recipies = [RecipeModel]()
-        recipies.append(RecipeModel(name: "Italian Pizza Chicken", origin: "Italian", countryCode: "IT", ingredients: getMockIngredients(), recipe: getMockRecipe(), imageData: Data()))
-        recipies.append(RecipeModel(name: "Greek Pasta Bake", origin: "Greek", countryCode: "GR", ingredients: getMockIngredients(), recipe: getMockRecipe(), imageData: Data()))
-        recipies.append(RecipeModel(name: "Hearty Parsnip Soup", origin: "British", countryCode: "GB", ingredients: getMockIngredients(), recipe: getMockRecipe(), imageData: Data()))
-        recipies.append(RecipeModel(name: "Honey & Soy Salmon", origin: "Chinese", countryCode: "CN", ingredients: getMockIngredients(), recipe: getMockRecipe(), imageData: Data()))
+        recipies.append(RecipeModel(name: "Italian Pizza Chicken", origin: "Italy", favourite: true, countryCode: "IT", ingredients: getMockIngredients(), recipe: getMockRecipe(), imageData: Data()))
+        recipies.append(RecipeModel(name: "Greek Pasta Bake", origin: "Greece", favourite: true, countryCode: "GR", ingredients: getMockIngredients(), recipe: getMockRecipe(), imageData: Data()))
+        recipies.append(RecipeModel(name: "Hearty Parsnip Soup", origin: "UK", favourite: false, countryCode: "GB", ingredients: getMockIngredients(), recipe: getMockRecipe(), imageData: Data()))
+        recipies.append(RecipeModel(name: "Honey & Soy Salmon", origin: "China", favourite: true, countryCode: "CN", ingredients: getMockIngredients(), recipe: getMockRecipe(), imageData: Data()))
+        recipies.append(RecipeModel(name: "Chinnese rolls", origin: "China", favourite: true, countryCode: "CN", ingredients: getMockIngredients(), recipe: getMockRecipe(), imageData: Data()))
+        recipies.append(RecipeModel(name: "Burrito", origin: "USA", favourite: true, countryCode: "US", ingredients: getMockIngredients(), recipe: getMockRecipe(), imageData: Data()))
+        recipies.append(RecipeModel(name: "French fries", origin: "USA", favourite: true, countryCode: "US", ingredients: getMockIngredients(), recipe: getMockRecipe(), imageData: Data()))
+        recipies.append(RecipeModel(name: "Taco Loco", origin: "Mexico", favourite: true, countryCode: "MX", ingredients: getMockIngredients(), recipe: getMockRecipe(), imageData: Data()))
+        recipies.append(RecipeModel(name: "Pozole", origin: "Mexico", favourite: true, countryCode: "MX", ingredients: getMockIngredients(), recipe: getMockRecipe(), imageData: Data()))
+        recipies.append(RecipeModel(name: "Mole", origin: "Mexico", favourite: true, countryCode: "MX", ingredients: getMockIngredients(), recipe: getMockRecipe(), imageData: Data()))
         
-        recipies.append(contentsOf: getRecipes())
+        //recipies.append(contentsOf: getRecipes())
         
         return recipies
     }
@@ -119,6 +125,18 @@ struct Helper {
     static func getRecipeLocations() -> [AnnotationPin] {
         var locations = [AnnotationPin]()
         let recipes = getRecipes()
+        let countries = Set(recipes.map{$0.origin})
+        
+        for country in countries {
+            let count = recipes.filter {$0.origin == country }.count
+            let subtitle = count > 1 ? "\(count) Recipes" : "\(count) Recipe"
+            locations.append(AnnotationPin(title: country, subtitle: subtitle, coordinate: Helper.getCoordinates(country: country)))
+        }
+        return locations
+    }
+    
+    static func getRecipeLocations(recipes: [RecipeModel]) -> [AnnotationPin] {
+        var locations = [AnnotationPin]()
         let countries = Set(recipes.map{$0.origin})
         
         for country in countries {
