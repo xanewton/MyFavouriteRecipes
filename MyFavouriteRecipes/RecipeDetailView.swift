@@ -10,6 +10,7 @@ import SwiftUI
 struct RecipeDetailView: View {
     @State var recipe: RecipeModel!
     @State private var viewIndex = 0
+    @State private var angle: Double = 0
     @EnvironmentObject var appData: AppData
     
     private var isFavourite: Bool {
@@ -39,10 +40,16 @@ struct RecipeDetailView: View {
                     appData.fontColor = self.isFavourite ? .orange : .primary
                     self.recipe.favourite.toggle()
                     self.appData.updateRecipe(recipe: self.recipe)
+                    withAnimation(.spring()) {
+                            self.angle = self.angle == 1080 ? 0 : 1080
+                        }
                 }) {
                     Image(systemName: isFavourite ? "star.fill" : "star")
                 }
+                .rotationEffect(.degrees(angle))
+                .frame(height: 45)
             }
+            
                         
             // Recipe origin
             Text("Origin: \(recipe.origin)")
