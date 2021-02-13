@@ -17,6 +17,8 @@ struct AddRecipeView: View {
     @State private var libraryImage: UIImage?
     @State private var selectedCountry = 0
     
+    @State private var angle: Double = 0
+    
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var appData: AppData
     
@@ -38,7 +40,10 @@ struct AddRecipeView: View {
                     }
                 }
                 Button(action: {
-                    self.showingImagePicker.toggle()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                        self.showingImagePicker.toggle()
+                    }
+                    self.angle = self.angle == 360 ? 0 : 360
                 }) {
                     Image(uiImage: self.libraryImage ?? (UIImage(named: "placeholder-add-image") ?? UIImage()))
                         .resizable()
@@ -48,6 +53,8 @@ struct AddRecipeView: View {
                         .frame(maxWidth: .infinity, maxHeight: 230)
                         .padding(6)
                 }
+                .rotation3DEffect(.degrees(angle), axis: (x: 0, y: 1, z: 0))
+                .animation(.spring())
                 .sheet(isPresented: $showingImagePicker) {
                     ImagePicker(image: self.$libraryImage)
                 }.buttonStyle(PlainButtonStyle())
