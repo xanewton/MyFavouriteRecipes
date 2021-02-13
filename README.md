@@ -30,6 +30,11 @@ eBook source code available at [github](https://github.com/PacktPublishing/Learn
 - [MapKit](https://developer.apple.com/documentation/mapkit/mkmapview)
 - [CoreLocation](https://developer.apple.com/documentation/corelocation/)
 - For more information on app thinning and how you reduce the size of your app, see this [video](https://developer.apple.com/videos/play/wwdc2015/404/) from WWDC 2015, where Apple engineers go into it in much more detail.
+- [WatchKit](https://developer.apple.com/documentation/watchkit)
+- [App Extensions](https://developer.apple.com/app-extensions/)
+- [WatchConnectivity Framework](https://developer.apple.com/documentation/watchconnectivity) 
+- [UserDefaults](https://developer.apple.com/documentation/foundation/userdefaults)
+- Article [Get Started With Watch Connectivity With SwiftUI](https://medium.com/better-programming/get-started-with-watch-connectivity-with-swiftui-51722324b6f6)
 
 
 ## License
