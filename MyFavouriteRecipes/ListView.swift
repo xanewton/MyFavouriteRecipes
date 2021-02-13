@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ListView: View {
     /*
     #if DEBUG
     var recipes = Helper.mockRecipes()
@@ -83,8 +83,7 @@ struct ContentView: View {
                     }
             )
         }
-        //.navigationViewStyle(DoubleColumnNavigationViewStyle())
-        .navigationViewStyle(StackNavigationViewStyle())
+        .navigationViewStyle(DoubleColumnNavigationViewStyle())
         .padding()
     }
 }
@@ -114,11 +113,11 @@ class AppData: ObservableObject {
 }
 
 
-struct ContentView_Previews: PreviewProvider {
+struct ListView_Previews: PreviewProvider {
     static let appData = AppData()
     
     static var previews: some View {
         appData.recipes = Helper.mockRecipes()
-        return ContentView().environmentObject(appData)
+        return ListView().environmentObject(appData)
     }
 }
