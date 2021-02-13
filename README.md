@@ -7,6 +7,7 @@ eBook source code available at [github](https://github.com/PacktPublishing/Learn
   <img src="/readmeImages/list.png" width="20%" height="20%">
   <img src="/readmeImages/details.png" width="20%" height="20%">
   <img src="/readmeImages/map.png" width="20%" height="20%">
+  <img src="/readmeImages/add.png" width="20%" height="20%">
 </p>
 
 
