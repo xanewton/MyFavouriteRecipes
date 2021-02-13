@@ -20,6 +20,14 @@
 		463F977625D09A5300327EF8 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463F977525D09A5300327EF8 /* RecipeView.swift */; };
 		463F977C25D0A86400327EF8 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463F977B25D0A86400327EF8 /* Helper.swift */; };
 		465DA2FB25D4A7E200750394 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465DA2FA25D4A7E200750394 /* NetworkHelper.swift */; };
+		465EBB2A25D865950034ADF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 465EBB2925D865950034ADF0 /* Assets.xcassets */; };
+		465EBB3125D865950034ADF0 /* MyFavoriteRecipesWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 465EBB3025D865950034ADF0 /* MyFavoriteRecipesWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		465EBB3625D865950034ADF0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465EBB3525D865950034ADF0 /* ContentView.swift */; };
+		465EBB3825D865950034ADF0 /* MyFavouriteRecipesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465EBB3725D865950034ADF0 /* MyFavouriteRecipesApp.swift */; };
+		465EBB3A25D865950034ADF0 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465EBB3925D865950034ADF0 /* ComplicationController.swift */; };
+		465EBB3C25D865950034ADF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 465EBB3B25D865950034ADF0 /* Assets.xcassets */; };
+		465EBB3F25D865950034ADF0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 465EBB3E25D865950034ADF0 /* Preview Assets.xcassets */; };
+		465EBB4325D865950034ADF0 /* MyFavoriteRecipesWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 465EBB2725D865940034ADF0 /* MyFavoriteRecipesWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4682A81625D75B3700063F63 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4682A81525D75B3700063F63 /* ContentView.swift */; };
 		4682A81925D75B7F00063F63 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4682A81825D75B7F00063F63 /* WelcomeView.swift */; };
 		46D0203D25D1F0A800AF34F5 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D0203C25D1F0A800AF34F5 /* RecipeDetailView.swift */; };
@@ -27,6 +35,48 @@
 		46F84E3B25D34FC900CF7F3D /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F84E3A25D34FC900CF7F3D /* ImageHelper.swift */; };
 		46F84E3E25D3540A00CF7F3D /* TextHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F84E3D25D3540A00CF7F3D /* TextHelper.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		465EBB3225D865950034ADF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 463F975125D0822A00327EF8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 465EBB2F25D865950034ADF0;
+			remoteInfo = "MyFavoriteRecipesWatch Extension";
+		};
+		465EBB4125D865950034ADF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 463F975125D0822A00327EF8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 465EBB2625D865940034ADF0;
+			remoteInfo = MyFavoriteRecipesWatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		465EBB4425D865950034ADF0 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				465EBB4325D865950034ADF0 /* MyFavoriteRecipesWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		465EBB4725D865950034ADF0 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				465EBB3125D865950034ADF0 /* MyFavoriteRecipesWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4607EB6625D5ED4B0029726D /* RecipeMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeMapView.swift; sourceTree = "<group>"; };
@@ -44,6 +94,16 @@
 		463F977525D09A5300327EF8 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 		463F977B25D0A86400327EF8 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		465DA2FA25D4A7E200750394 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		465EBB2725D865940034ADF0 /* MyFavoriteRecipesWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFavoriteRecipesWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		465EBB2925D865950034ADF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		465EBB2B25D865950034ADF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		465EBB3025D865950034ADF0 /* MyFavoriteRecipesWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "MyFavoriteRecipesWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		465EBB3525D865950034ADF0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		465EBB3725D865950034ADF0 /* MyFavouriteRecipesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavouriteRecipesApp.swift; sourceTree = "<group>"; };
+		465EBB3925D865950034ADF0 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		465EBB3B25D865950034ADF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		465EBB3E25D865950034ADF0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		465EBB4025D865950034ADF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4682A81525D75B3700063F63 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4682A81825D75B7F00063F63 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		46D0203C25D1F0A800AF34F5 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
@@ -60,6 +120,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		465EBB2D25D865950034ADF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -69,6 +136,8 @@
 				463F976D25D082EE00327EF8 /* LICENSE.txt */,
 				463F976C25D082EE00327EF8 /* README.md */,
 				463F975B25D0822A00327EF8 /* MyFavouriteRecipes */,
+				465EBB2825D865940034ADF0 /* MyFavoriteRecipesWatch */,
+				465EBB3425D865950034ADF0 /* MyFavoriteRecipesWatch Extension */,
 				463F975A25D0822A00327EF8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,6 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				463F975925D0822A00327EF8 /* MyFavouriteRecipes.app */,
+				465EBB2725D865940034ADF0 /* MyFavoriteRecipesWatch.app */,
+				465EBB3025D865950034ADF0 /* MyFavoriteRecipesWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,6 +193,36 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		465EBB2825D865940034ADF0 /* MyFavoriteRecipesWatch */ = {
+			isa = PBXGroup;
+			children = (
+				465EBB2925D865950034ADF0 /* Assets.xcassets */,
+				465EBB2B25D865950034ADF0 /* Info.plist */,
+			);
+			path = MyFavoriteRecipesWatch;
+			sourceTree = "<group>";
+		};
+		465EBB3425D865950034ADF0 /* MyFavoriteRecipesWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				465EBB3525D865950034ADF0 /* ContentView.swift */,
+				465EBB3725D865950034ADF0 /* MyFavouriteRecipesApp.swift */,
+				465EBB3925D865950034ADF0 /* ComplicationController.swift */,
+				465EBB3B25D865950034ADF0 /* Assets.xcassets */,
+				465EBB4025D865950034ADF0 /* Info.plist */,
+				465EBB3D25D865950034ADF0 /* Preview Content */,
+			);
+			path = "MyFavoriteRecipesWatch Extension";
+			sourceTree = "<group>";
+		};
+		465EBB3D25D865950034ADF0 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				465EBB3E25D865950034ADF0 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,15 +233,51 @@
 				463F975525D0822A00327EF8 /* Sources */,
 				463F975625D0822A00327EF8 /* Frameworks */,
 				463F975725D0822A00327EF8 /* Resources */,
+				465EBB4425D865950034ADF0 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				465EBB4225D865950034ADF0 /* PBXTargetDependency */,
 			);
 			name = MyFavouriteRecipes;
 			productName = MyFavouriteRecipes;
 			productReference = 463F975925D0822A00327EF8 /* MyFavouriteRecipes.app */;
 			productType = "com.apple.product-type.application";
+		};
+		465EBB2625D865940034ADF0 /* MyFavoriteRecipesWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 465EBB4B25D865950034ADF0 /* Build configuration list for PBXNativeTarget "MyFavoriteRecipesWatch" */;
+			buildPhases = (
+				465EBB2525D865940034ADF0 /* Resources */,
+				465EBB4725D865950034ADF0 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				465EBB3325D865950034ADF0 /* PBXTargetDependency */,
+			);
+			name = MyFavoriteRecipesWatch;
+			productName = MyFavoriteRecipesWatch;
+			productReference = 465EBB2725D865940034ADF0 /* MyFavoriteRecipesWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		465EBB2F25D865950034ADF0 /* MyFavoriteRecipesWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 465EBB4A25D865950034ADF0 /* Build configuration list for PBXNativeTarget "MyFavoriteRecipesWatch Extension" */;
+			buildPhases = (
+				465EBB2C25D865950034ADF0 /* Sources */,
+				465EBB2D25D865950034ADF0 /* Frameworks */,
+				465EBB2E25D865950034ADF0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MyFavoriteRecipesWatch Extension";
+			productName = "MyFavoriteRecipesWatch Extension";
+			productReference = 465EBB3025D865950034ADF0 /* MyFavoriteRecipesWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -152,6 +289,12 @@
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					463F975825D0822A00327EF8 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					465EBB2625D865940034ADF0 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					465EBB2F25D865950034ADF0 = {
 						CreatedOnToolsVersion = 12.4;
 					};
 				};
@@ -170,6 +313,8 @@
 			projectRoot = "";
 			targets = (
 				463F975825D0822A00327EF8 /* MyFavouriteRecipes */,
+				465EBB2625D865940034ADF0 /* MyFavoriteRecipesWatch */,
+				465EBB2F25D865950034ADF0 /* MyFavoriteRecipesWatch Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -183,6 +328,23 @@
 				463F976E25D082EE00327EF8 /* README.md in Resources */,
 				463F976425D0822B00327EF8 /* Preview Assets.xcassets in Resources */,
 				463F976125D0822B00327EF8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		465EBB2525D865940034ADF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				465EBB2A25D865950034ADF0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		465EBB2E25D865950034ADF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				465EBB3F25D865950034ADF0 /* Preview Assets.xcassets in Resources */,
+				465EBB3C25D865950034ADF0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,7 +373,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		465EBB2C25D865950034ADF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				465EBB3625D865950034ADF0 /* ContentView.swift in Sources */,
+				465EBB3825D865950034ADF0 /* MyFavouriteRecipesApp.swift in Sources */,
+				465EBB3A25D865950034ADF0 /* ComplicationController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		465EBB3325D865950034ADF0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 465EBB2F25D865950034ADF0 /* MyFavoriteRecipesWatch Extension */;
+			targetProxy = 465EBB3225D865950034ADF0 /* PBXContainerItemProxy */;
+		};
+		465EBB4225D865950034ADF0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 465EBB2625D865940034ADF0 /* MyFavoriteRecipesWatch */;
+			targetProxy = 465EBB4125D865950034ADF0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		463F976625D0822B00327EF8 /* Debug */ = {
@@ -374,6 +559,94 @@
 			};
 			name = Release;
 		};
+		465EBB4525D865950034ADF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 567K2BW2V9;
+				IBSC_MODULE = MyFavoriteRecipesWatch_Extension;
+				INFOPLIST_FILE = MyFavoriteRecipesWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.studentool.ios.MyFavouriteRecipes.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Debug;
+		};
+		465EBB4625D865950034ADF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 567K2BW2V9;
+				IBSC_MODULE = MyFavoriteRecipesWatch_Extension;
+				INFOPLIST_FILE = MyFavoriteRecipesWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.studentool.ios.MyFavouriteRecipes.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Release;
+		};
+		465EBB4825D865950034ADF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"MyFavoriteRecipesWatch Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 567K2BW2V9;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "MyFavoriteRecipesWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.studentool.ios.MyFavouriteRecipes.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Debug;
+		};
+		465EBB4925D865950034ADF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"MyFavoriteRecipesWatch Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 567K2BW2V9;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "MyFavoriteRecipesWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.studentool.ios.MyFavouriteRecipes.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -391,6 +664,24 @@
 			buildConfigurations = (
 				463F976925D0822B00327EF8 /* Debug */,
 				463F976A25D0822B00327EF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		465EBB4A25D865950034ADF0 /* Build configuration list for PBXNativeTarget "MyFavoriteRecipesWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				465EBB4825D865950034ADF0 /* Debug */,
+				465EBB4925D865950034ADF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		465EBB4B25D865950034ADF0 /* Build configuration list for PBXNativeTarget "MyFavoriteRecipesWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				465EBB4525D865950034ADF0 /* Debug */,
+				465EBB4625D865950034ADF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
