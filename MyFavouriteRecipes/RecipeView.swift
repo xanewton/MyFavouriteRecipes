@@ -11,6 +11,11 @@ struct RecipeView: View {
     @State var recipe = RecipeModel()
     @EnvironmentObject var appData: AppData
     
+    private var isFavourite: Bool {
+        //return Helper.getFavourites().contains(where: {($0.name == recipe.name)})
+        return appData.favourites.contains(where: {($0.name == recipe.name)})
+    }
+    
     var body: some View {
         Group {
             VStack(alignment: .leading) {
@@ -30,7 +35,8 @@ struct RecipeView: View {
                     self.appData.updateRecipe(recipe: self.recipe)
                     //self.appData.updateRecipeFavorite(recipe: self.recipe)
                 }) {
-                    Image(systemName: Helper.isFavourite(name: recipe.name) ? "star.fill" : "star")
+                    //Image(systemName: Helper.isFavourite(name: recipe.name) ? "star.fill" : "star")
+                    Image(systemName: isFavourite ? "star.fill" : "star")
                 }
             }
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .trailing)

@@ -13,7 +13,8 @@ struct RecipeDetailView: View {
     @EnvironmentObject var appData: AppData
     
     private var isFavourite: Bool {
-        return Helper.getFavourites().contains(where: {($0.name == recipe.name)})
+        //return Helper.getFavourites().contains(where: {($0.name == recipe.name)})
+        return appData.favourites.contains(where: {($0.name == recipe.name)})
     }
 
     var body: some View {
@@ -35,7 +36,7 @@ struct RecipeDetailView: View {
                 // Favourites Button
                 Button(action: {
                     Helper.addRemoveFavourite(recipe: self.recipe)
-                    appData.fontColor = self.isFavourite ? .orange : .black
+                    appData.fontColor = self.isFavourite ? .orange : .primary
                     self.recipe.favourite.toggle()
                     self.appData.updateRecipe(recipe: self.recipe)
                 }) {

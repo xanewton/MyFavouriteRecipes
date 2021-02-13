@@ -16,14 +16,27 @@ struct AddRecipeView: View {
     @State internal var showingImagePicker = false
     @State private var libraryImage: UIImage?
     @State private var selectedCountry = 0
-    internal var countries = Helper.getCountries()
     
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var appData: AppData
     
+    internal var countries = Helper.getCountries()
+    private var numberOfCountires: Int {
+        return countries.count
+    }
+    
     var body: some View {
         NavigationView {
             Form {
+                Section(header: Text("Country of Origin:")) {
+                    // Note that the Picker requires a NavigationView as parent.
+                    Picker(selection: $selectedCountry, label: Text("Country")) {
+                        ForEach(0 ..< countries.count) {
+                            Text(self.countries[$0]).tag($0)
+                                .font(.headline)
+                        }
+                    }
+                }
                 Button(action: {
                     self.showingImagePicker.toggle()
                 }) {
@@ -38,7 +51,11 @@ struct AddRecipeView: View {
                 .sheet(isPresented: $showingImagePicker) {
                     ImagePicker(image: self.$libraryImage)
                 }.buttonStyle(PlainButtonStyle())
-                
+                Button(action: {
+                    self.getRandomImage()
+                }) {
+                    Text("Random Image")
+                }
                 Section(header: Text("Add Recipe Name:")) {
                     TextField("enter recipe name", text: $recipeName)
                 }
@@ -52,8 +69,8 @@ struct AddRecipeView: View {
                             Button(action: {
                                 self.ingredients.removeAll { $0 == item }
                             }) {
-                            Image(systemName: "minus")
-                                .foregroundColor(Color(UIColor.opaqueSeparator))
+                                Image(systemName: "minus")
+                                    .foregroundColor(Color(UIColor.opaqueSeparator))
                             }
                             .padding(.trailing, 8)
                             Text(item)
@@ -64,30 +81,27 @@ struct AddRecipeView: View {
                     TextView(text: $recipeDetails)
                         .frame(height: 220)
                 }
-                Section(header: Text("Country of Origin:")) {
-                    Picker(selection: $selectedCountry, label: Text("Country")) {
-                        ForEach(0 ..< countries.count) {
-                            Text(self.countries[$0]).tag($0)
-                        }
-                    }
-                }
-            } // Closing Form Brace
-            .navigationBarTitle("Add Recipe")
-            .navigationBarItems(leading:
-                Button(action: {
-                    self.getRandomImage()
-                }) {
-                    Text("Random Image")
-                },trailing:
                 Button(action: {
                     self.saveRecipe()
                     self.presentationMode.wrappedValue.dismiss()
                 }) {
                     Text("Save")
                 }
-            )
-        } // closing NavigationView
+            } // Closing Form Brace
+            .navigationBarTitle("Add Recipe")
+        }// closing NavigationView
         .navigationViewStyle(StackNavigationViewStyle())
+    }
+    
+    private func getRandomImage() {
+        // The public open API (https://source.unsplash.com/) will generate a placeholder image based on the structure of the URL.
+        // https://source.unsplash.com/300x200/?food is a 300x200 size image categorized as food.
+        guard let url = URL(string: "https://source.unsplash.com/300x200/?food") else {
+            return
+        }
+        NetworkHelper.loadData(url: url) { (image) in
+            self.libraryImage = image
+        }
     }
     
     private func saveRecipe() {
@@ -96,7 +110,6 @@ struct AddRecipeView: View {
             recipeImage = libImage
         }
         let country = countries[selectedCountry]
-        
         let newRecipe = RecipeModel(id: UUID(),
                                     name: recipeName,
                                     origin: country,
@@ -109,17 +122,6 @@ struct AddRecipeView: View {
         // Update Local Saved Data
         appData.recipes.append(newRecipe)
         Helper.saveRecipes(recipes: appData.recipes)
-    }
-
-    private func getRandomImage() {
-        // The public open API (https://source.unsplash.com/) will generate a placeholder image based on the structure of the URL.
-        // https://source.unsplash.com/300x200/?food is a 300x200 size image categorized as food.
-        guard let url = URL(string: "https://source.unsplash.com/300x200/?food") else {
-            return
-        }
-        NetworkHelper.loadData(url: url) { (image) in
-            self.libraryImage = image
-        }
     }
 }
 
