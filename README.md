@@ -35,6 +35,8 @@ eBook source code available at [github](https://github.com/PacktPublishing/Learn
 - [WatchConnectivity Framework](https://developer.apple.com/documentation/watchconnectivity) 
 - [UserDefaults](https://developer.apple.com/documentation/foundation/userdefaults)
 - Article [Get Started With Watch Connectivity With SwiftUI](https://medium.com/better-programming/get-started-with-watch-connectivity-with-swiftui-51722324b6f6)
+- [Dispatch](https://developer.apple.com/documentation/DISPATCH)
+- [Floating Points](https://floating-point-gui.de/)
 
 
 ## License
