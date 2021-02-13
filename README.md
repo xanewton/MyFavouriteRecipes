@@ -28,7 +28,7 @@ eBook source code available at [github](https://github.com/PacktPublishing/Learn
 - [UIViewControllerRepresentable](https://developer.apple.com/documentation/swiftui/uiviewcontrollerrepresentable)
 - [MapKit](https://developer.apple.com/documentation/mapkit/mkmapview)
 - [CoreLocation](https://developer.apple.com/documentation/corelocation/)
-
+- For more information on app thinning and how you reduce the size of your app, see this [video](https://developer.apple.com/videos/play/wwdc2015/404/) from WWDC 2015, where Apple engineers go into it in much more detail.
 
 
 ## License
