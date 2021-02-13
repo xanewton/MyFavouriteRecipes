@@ -83,7 +83,8 @@ struct ContentView: View {
                     }
             )
         }
-        .navigationViewStyle(DoubleColumnNavigationViewStyle())
+        //.navigationViewStyle(DoubleColumnNavigationViewStyle())
+        .navigationViewStyle(StackNavigationViewStyle())
         .padding()
     }
 }

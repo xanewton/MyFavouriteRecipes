@@ -86,7 +86,8 @@ struct AddRecipeView: View {
                     Text("Save")
                 }
             )
-        }
+        } // closing NavigationView
+        .navigationViewStyle(StackNavigationViewStyle())
     }
     
     private func saveRecipe() {

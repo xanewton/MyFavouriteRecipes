@@ -29,6 +29,7 @@ struct RecipeMapView: View {
             MapView(lat: latitude, long: longitude, annotations: Helper.getMockLocations(), presentationMode: presentationMode, filter: $filter)
                 .navigationBarTitle(Text("Recipes of the World!"))
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
