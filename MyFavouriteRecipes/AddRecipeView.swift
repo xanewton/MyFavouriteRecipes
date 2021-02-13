@@ -19,6 +19,7 @@ struct AddRecipeView: View {
     
     @State private var angle: Double = 0
     @State private var validated = false
+    @State var loadingImage = false
     
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var appData: AppData
@@ -53,6 +54,10 @@ struct AddRecipeView: View {
                         .overlay(Circle().stroke(Color.purple, lineWidth: 3).shadow(radius: 10))
                         .frame(maxWidth: .infinity, maxHeight: 230)
                         .padding(6)
+                    if loadingImage {
+                        Text("fetching random image")
+                            .transition(.asymmetric(insertion: .opacity, removal: .scale))
+                    }
                 }
                 .rotation3DEffect(.degrees(angle), axis: (x: 0, y: 1, z: 0))
                 .animation(.spring())
@@ -61,6 +66,9 @@ struct AddRecipeView: View {
                 }.buttonStyle(PlainButtonStyle())
                 Button(action: {
                     self.getRandomImage()
+                    withAnimation {
+                        self.loadingImage.toggle()
+                    }
                 }) {
                     Text("Random Image")
                 }
@@ -121,6 +129,7 @@ struct AddRecipeView: View {
         }
         NetworkHelper.loadData(url: url) { (image) in
             self.libraryImage = image
+            self.loadingImage.toggle()
         }
     }
     
