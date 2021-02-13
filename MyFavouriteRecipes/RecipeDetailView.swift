@@ -10,6 +10,7 @@ import SwiftUI
 struct RecipeDetailView: View {
     @State var recipe: RecipeModel!
     @State private var viewIndex = 0
+    @State private var imageOpacity = 0.0
     @State private var angle: Double = 0
     @EnvironmentObject var appData: AppData
     
@@ -25,6 +26,12 @@ struct RecipeDetailView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(maxWidth: .infinity, maxHeight: 200)
+                .opacity(imageOpacity)
+                .onAppear {
+                    withAnimation(Animation.easeIn(duration: 2.6).delay(0.4)) {
+                        self.imageOpacity = 1
+                    }
+                }
 
             // Remaining code will go here...
             HStack {
