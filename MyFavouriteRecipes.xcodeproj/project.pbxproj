@@ -32,6 +32,7 @@
 		465EBB5325D86A290034ADF0 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463F977B25D0A86400327EF8 /* Helper.swift */; };
 		465EBB5825D86A880034ADF0 /* AnnotationPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465EBB5725D86A880034ADF0 /* AnnotationPin.swift */; };
 		465EBB5C25D86AE80034ADF0 /* AnnotationPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465EBB5725D86A880034ADF0 /* AnnotationPin.swift */; };
+		465EBB6125D86C070034ADF0 /* IngredientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465EBB6025D86C070034ADF0 /* IngredientsView.swift */; };
 		4682A81625D75B3700063F63 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4682A81525D75B3700063F63 /* ContentView.swift */; };
 		4682A81925D75B7F00063F63 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4682A81825D75B7F00063F63 /* WelcomeView.swift */; };
 		46D0203D25D1F0A800AF34F5 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D0203C25D1F0A800AF34F5 /* RecipeDetailView.swift */; };
@@ -109,6 +110,7 @@
 		465EBB3E25D865950034ADF0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		465EBB4025D865950034ADF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		465EBB5725D86A880034ADF0 /* AnnotationPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationPin.swift; sourceTree = "<group>"; };
+		465EBB6025D86C070034ADF0 /* IngredientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsView.swift; sourceTree = "<group>"; };
 		4682A81525D75B3700063F63 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4682A81825D75B7F00063F63 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		46D0203C25D1F0A800AF34F5 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 				465EBB3525D865950034ADF0 /* ContentView.swift */,
 				465EBB3725D865950034ADF0 /* MyFavouriteRecipesApp.swift */,
 				465EBB3925D865950034ADF0 /* ComplicationController.swift */,
+				465EBB6025D86C070034ADF0 /* IngredientsView.swift */,
 				465EBB3B25D865950034ADF0 /* Assets.xcassets */,
 				465EBB4025D865950034ADF0 /* Info.plist */,
 				465EBB3D25D865950034ADF0 /* Preview Content */,
@@ -387,6 +390,7 @@
 				465EBB5C25D86AE80034ADF0 /* AnnotationPin.swift in Sources */,
 				465EBB3625D865950034ADF0 /* ContentView.swift in Sources */,
 				465EBB4F25D8698E0034ADF0 /* RecipeModel.swift in Sources */,
+				465EBB6125D86C070034ADF0 /* IngredientsView.swift in Sources */,
 				465EBB5325D86A290034ADF0 /* Helper.swift in Sources */,
 				465EBB3825D865950034ADF0 /* MyFavouriteRecipesApp.swift in Sources */,
 				465EBB3A25D865950034ADF0 /* ComplicationController.swift in Sources */,

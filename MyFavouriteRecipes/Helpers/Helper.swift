@@ -49,7 +49,7 @@ struct Helper {
         return recipies
     }
     
-    private static func getMockIngredients() -> [String] {
+    static func getMockIngredients() -> [String] {
         return ["1 x Ingredient One",
             "2tbp Ingredient Two",
             "500g Ingredient Three",
