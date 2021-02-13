@@ -18,6 +18,7 @@ struct AddRecipeView: View {
     @State private var selectedCountry = 0
     
     @State private var angle: Double = 0
+    @State private var validated = false
     
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var appData: AppData
@@ -89,10 +90,22 @@ struct AddRecipeView: View {
                         .frame(height: 220)
                 }
                 Button(action: {
-                    self.saveRecipe()
-                    self.presentationMode.wrappedValue.dismiss()
+                    if self.recipeName != "" {
+                        self.saveRecipe()
+                        self.presentationMode.wrappedValue.dismiss()
+                    } else {
+                        withAnimation {
+                            self.validated.toggle()
+                        }
+                    }
                 }) {
                     Text("Save")
+                }
+                if validated {
+                    Text("* Please give your recipe a name")
+                        .foregroundColor(.red)
+                        .bold()
+                        .transition(.move(edge: .top))
                 }
             } // Closing Form Brace
             .navigationBarTitle("Add Recipe")
