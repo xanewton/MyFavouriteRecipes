@@ -121,7 +121,8 @@ struct AddRecipeView: View {
         
         // Update Local Saved Data
         appData.recipes.append(newRecipe)
-        Helper.saveRecipes(recipes: appData.recipes)
+        Helper.saveRecipes(recipes: self.appData.recipes)
+        WatchManager.sharedInstance.send(recipe: newRecipe)
     }
 }
 

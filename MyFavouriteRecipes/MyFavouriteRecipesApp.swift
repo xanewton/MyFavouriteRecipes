@@ -21,6 +21,9 @@ struct MyFavouriteRecipesApp: App {
         let mock = Helper.mockRecipes()
         appData.recipes = Helper.getRecipes()
         appData.recipes.append(contentsOf: mock)
+        
+        // Override point for customization after application launch. ?
+        //_ = WatchManager.sharedInstance
     }
     
     var body: some Scene {

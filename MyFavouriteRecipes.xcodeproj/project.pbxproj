@@ -34,6 +34,7 @@
 		465EBB5C25D86AE80034ADF0 /* AnnotationPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465EBB5725D86A880034ADF0 /* AnnotationPin.swift */; };
 		465EBB6125D86C070034ADF0 /* IngredientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465EBB6025D86C070034ADF0 /* IngredientsView.swift */; };
 		465EBB6925D86F4C0034ADF0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465EBB6825D86F4C0034ADF0 /* HomeView.swift */; };
+		465EBB7425D872CD0034ADF0 /* WatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465EBB7325D872CD0034ADF0 /* WatchManager.swift */; };
 		4682A81625D75B3700063F63 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4682A81525D75B3700063F63 /* ContentView.swift */; };
 		4682A81925D75B7F00063F63 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4682A81825D75B7F00063F63 /* WelcomeView.swift */; };
 		46D0203D25D1F0A800AF34F5 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D0203C25D1F0A800AF34F5 /* RecipeDetailView.swift */; };
@@ -113,6 +114,7 @@
 		465EBB5725D86A880034ADF0 /* AnnotationPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationPin.swift; sourceTree = "<group>"; };
 		465EBB6025D86C070034ADF0 /* IngredientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsView.swift; sourceTree = "<group>"; };
 		465EBB6825D86F4C0034ADF0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		465EBB7325D872CD0034ADF0 /* WatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchManager.swift; sourceTree = "<group>"; };
 		4682A81525D75B3700063F63 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4682A81825D75B7F00063F63 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		46D0203C25D1F0A800AF34F5 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
@@ -164,12 +166,12 @@
 		463F975B25D0822A00327EF8 /* MyFavouriteRecipes */ = {
 			isa = PBXGroup;
 			children = (
+				465EBB7B25D8732C0034ADF0 /* Models */,
 				465DA2FE25D4BE6C00750394 /* Helpers */,
 				463F975C25D0822A00327EF8 /* MyFavouriteRecipesApp.swift */,
 				4682A81525D75B3700063F63 /* ContentView.swift */,
 				4682A81825D75B7F00063F63 /* WelcomeView.swift */,
 				463F975E25D0822A00327EF8 /* ListView.swift */,
-				463F977125D08E4800327EF8 /* RecipeModel.swift */,
 				463F977525D09A5300327EF8 /* RecipeView.swift */,
 				46D0203C25D1F0A800AF34F5 /* RecipeDetailView.swift */,
 				46F84E3525D342DA00CF7F3D /* AddRecipeView.swift */,
@@ -198,7 +200,7 @@
 				465DA2FA25D4A7E200750394 /* NetworkHelper.swift */,
 				4607EB6925D5EDA70029726D /* MapKitHelper.swift */,
 				4607EB6E25D5F82C0029726D /* MapLocationManager.swift */,
-				465EBB5725D86A880034ADF0 /* AnnotationPin.swift */,
+				465EBB7325D872CD0034ADF0 /* WatchManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -233,6 +235,15 @@
 				465EBB3E25D865950034ADF0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		465EBB7B25D8732C0034ADF0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				463F977125D08E4800327EF8 /* RecipeModel.swift */,
+				465EBB5725D86A880034ADF0 /* AnnotationPin.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,6 +386,7 @@
 				4607EB6A25D5EDA70029726D /* MapKitHelper.swift in Sources */,
 				465DA2FB25D4A7E200750394 /* NetworkHelper.swift in Sources */,
 				46D0203D25D1F0A800AF34F5 /* RecipeDetailView.swift in Sources */,
+				465EBB7425D872CD0034ADF0 /* WatchManager.swift in Sources */,
 				463F975D25D0822A00327EF8 /* MyFavouriteRecipesApp.swift in Sources */,
 				46F84E3E25D3540A00CF7F3D /* TextHelper.swift in Sources */,
 				463F977C25D0A86400327EF8 /* Helper.swift in Sources */,
