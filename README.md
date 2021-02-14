@@ -37,6 +37,8 @@ eBook source code available at [github](https://github.com/PacktPublishing/Learn
 - Article [Get Started With Watch Connectivity With SwiftUI](https://medium.com/better-programming/get-started-with-watch-connectivity-with-swiftui-51722324b6f6)
 - [Dispatch](https://developer.apple.com/documentation/DISPATCH)
 - [Floating Points](https://floating-point-gui.de/)
+- [MobileA11y Blog](https://mobilea11y.com/)
+- [Static Analyzer](https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/debugging_with_xcode/chapters/static_analyzer.html)
 
 
 ## License
