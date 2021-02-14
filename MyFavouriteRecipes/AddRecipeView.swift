@@ -59,6 +59,7 @@ struct AddRecipeView: View {
                             .transition(.asymmetric(insertion: .opacity, removal: .scale))
                     }
                 }
+                .accessibility(identifier: "accessibility.add.image.button")
                 .rotation3DEffect(.degrees(angle), axis: (x: 0, y: 1, z: 0))
                 .animation(.spring())
                 .sheet(isPresented: $showingImagePicker) {

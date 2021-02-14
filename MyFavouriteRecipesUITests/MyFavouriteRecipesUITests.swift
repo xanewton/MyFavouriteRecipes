@@ -62,4 +62,9 @@ class MyFavouriteRecipesUITests: XCTestCase {
     func testCanTapAddButton() {
         app.buttons["accessibility.add.button"].tap()
     }
+    
+    func testCanAddRecipeImage() {
+        testCanTapAddButton()
+        app.buttons["accessibility.add.image.button"].tap()
+    }
 }
