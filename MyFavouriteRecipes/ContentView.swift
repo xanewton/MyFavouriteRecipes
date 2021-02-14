@@ -50,6 +50,7 @@ struct ContentView: View {
                             .renderingMode(.original)
                     }
                 }
+                .accessibility(identifier: "accessibility.filter.button")
                 }, trailing:
                 Button(action: {
                     self.showAddRecipe.toggle()
@@ -62,7 +63,9 @@ struct ContentView: View {
                         Image(systemName: "plus")
                             .renderingMode(.original)
                     }
-                }.sheet(isPresented: $showAddRecipe) {
+                }
+                .accessibility(identifier: "accessibility.add.button")
+                .sheet(isPresented: $showAddRecipe) {
                     AddRecipeView()
                 })
             WelcomeView()

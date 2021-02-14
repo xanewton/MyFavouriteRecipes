@@ -53,4 +53,16 @@ class MyFavouriteRecipesUITests: XCTestCase {
         // app.buttons is a list of all the buttons available at the time.
         app.buttons["accessibility.map.button"].tap()
     }
+    
+    func testCanTapFilterButton() {
+        let app = XCUIApplication()
+        app.launch()
+        app.buttons["accessibility.filter.button"].tap()
+    }
+        
+    func testCanTapAddButton() {
+        let app = XCUIApplication()
+        app.launch()
+        app.buttons["accessibility.add.button"].tap()
+    }
 }
