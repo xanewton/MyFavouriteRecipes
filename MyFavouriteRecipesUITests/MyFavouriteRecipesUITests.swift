@@ -9,6 +9,7 @@ import XCTest
 
 class MyFavouriteRecipesUITests: XCTestCase {
 
+    /*
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
 
@@ -38,5 +39,18 @@ class MyFavouriteRecipesUITests: XCTestCase {
                 XCUIApplication().launch()
             }
         }
+    } */
+    
+    
+    override func setUp() {
+        
+    }
+    
+    // Note: Always start your functions with the word "test". This is how Xcode and XCTest are able to identify your tests.
+    func testCanTapMapButton() {
+        let app = XCUIApplication()
+        app.launch()
+        // app.buttons is a list of all the buttons available at the time.
+        app.buttons["accessibility.map.button"].tap()
     }
 }

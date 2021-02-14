@@ -37,6 +37,7 @@ struct ContentView: View {
                 }.sheet(isPresented: $showMap) {
                     RecipeMapView(filter: self.$filter)
                 }
+                .accessibility(identifier: "accessibility.map.button")
                 Button(action: {
                     self.filter = ""
                 }) {
