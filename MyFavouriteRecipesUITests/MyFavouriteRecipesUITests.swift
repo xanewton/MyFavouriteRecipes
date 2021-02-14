@@ -67,4 +67,15 @@ class MyFavouriteRecipesUITests: XCTestCase {
         testCanTapAddButton()
         app.buttons["accessibility.add.image.button"].tap()
     }
+    
+    func testAddIngredientsAddsToList() {
+        testCanTapAddButton()
+            
+        let textField = app.textFields["accessibility.ingredient.textfield"]
+        textField.tap()
+        textField.typeText("Milk")
+        app.buttons["accessibility.ingredient.add.button"].tap()
+            
+        XCTAssertTrue(app.staticTexts["accessibility.ingredient.list"].exists)
+    }
 }

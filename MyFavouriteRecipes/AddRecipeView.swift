@@ -75,9 +75,11 @@ struct AddRecipeView: View {
                 }
                 Section(header: Text("Add Recipe Name:")) {
                     TextField("enter recipe name", text: $recipeName)
+                        .accessibility(identifier: "accessibility.name.textfield")
                 }
                 Section(header: Text("Add Ingredient:")) {
                     TextField("enter ingredient name", text: $ingredient)
+                        .accessibility(identifier: "accessibility.ingredient.textfield")
                         .modifier(AddButton(text: $ingredient, ingredients: $ingredients))
                 }
                 if ingredients.count > 0 {
@@ -92,6 +94,7 @@ struct AddRecipeView: View {
                             .padding(.trailing, 8)
                             Text(item)
                         }
+                        .accessibility(identifier: "accessibility.ingredient.list")
                     }
                 }
                 Section(header: Text("Details")) {
@@ -173,6 +176,7 @@ struct AddButton: ViewModifier {
                 Image(systemName: "plus")
                     .foregroundColor(Color(UIColor.opaqueSeparator))
             }
+            .accessibility(identifier: "accessibility.ingredient.add.button")
             .padding(.trailing, 8)
         }
     }
