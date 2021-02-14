@@ -37,6 +37,7 @@
 		465EBB7425D872CD0034ADF0 /* WatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465EBB7325D872CD0034ADF0 /* WatchManager.swift */; };
 		465EBB8B25D87B550034ADF0 /* WatchHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465EBB8A25D87B540034ADF0 /* WatchHelper.swift */; };
 		465EBB9025D881DE0034ADF0 /* ViewModelWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465EBB8F25D881DE0034ADF0 /* ViewModelWatch.swift */; };
+		465EBBA525D8A6950034ADF0 /* MyFavouriteRecipesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465EBBA425D8A6950034ADF0 /* MyFavouriteRecipesUITests.swift */; };
 		4682A81625D75B3700063F63 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4682A81525D75B3700063F63 /* ContentView.swift */; };
 		4682A81925D75B7F00063F63 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4682A81825D75B7F00063F63 /* WelcomeView.swift */; };
 		46D0203D25D1F0A800AF34F5 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D0203C25D1F0A800AF34F5 /* RecipeDetailView.swift */; };
@@ -59,6 +60,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 465EBB2625D865940034ADF0;
 			remoteInfo = MyFavoriteRecipesWatch;
+		};
+		465EBBA725D8A6950034ADF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 463F975125D0822A00327EF8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 463F975825D0822A00327EF8;
+			remoteInfo = MyFavouriteRecipes;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -119,6 +127,9 @@
 		465EBB7325D872CD0034ADF0 /* WatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchManager.swift; sourceTree = "<group>"; };
 		465EBB8A25D87B540034ADF0 /* WatchHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchHelper.swift; sourceTree = "<group>"; };
 		465EBB8F25D881DE0034ADF0 /* ViewModelWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelWatch.swift; sourceTree = "<group>"; };
+		465EBBA225D8A6950034ADF0 /* MyFavouriteRecipesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyFavouriteRecipesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		465EBBA425D8A6950034ADF0 /* MyFavouriteRecipesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavouriteRecipesUITests.swift; sourceTree = "<group>"; };
+		465EBBA625D8A6950034ADF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4682A81525D75B3700063F63 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4682A81825D75B7F00063F63 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		46D0203C25D1F0A800AF34F5 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
@@ -142,6 +153,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		465EBB9F25D8A6950034ADF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -153,6 +171,7 @@
 				463F975B25D0822A00327EF8 /* MyFavouriteRecipes */,
 				465EBB2825D865940034ADF0 /* MyFavoriteRecipesWatch */,
 				465EBB3425D865950034ADF0 /* MyFavoriteRecipesWatch Extension */,
+				465EBBA325D8A6950034ADF0 /* MyFavouriteRecipesUITests */,
 				463F975A25D0822A00327EF8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -163,6 +182,7 @@
 				463F975925D0822A00327EF8 /* MyFavouriteRecipes.app */,
 				465EBB2725D865940034ADF0 /* MyFavoriteRecipesWatch.app */,
 				465EBB3025D865950034ADF0 /* MyFavoriteRecipesWatch Extension.appex */,
+				465EBBA225D8A6950034ADF0 /* MyFavouriteRecipesUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -252,6 +272,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		465EBBA325D8A6950034ADF0 /* MyFavouriteRecipesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				465EBBA425D8A6950034ADF0 /* MyFavouriteRecipesUITests.swift */,
+				465EBBA625D8A6950034ADF0 /* Info.plist */,
+			);
+			path = MyFavouriteRecipesUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -308,6 +337,24 @@
 			productReference = 465EBB3025D865950034ADF0 /* MyFavoriteRecipesWatch Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
+		465EBBA125D8A6950034ADF0 /* MyFavouriteRecipesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 465EBBA925D8A6950034ADF0 /* Build configuration list for PBXNativeTarget "MyFavouriteRecipesUITests" */;
+			buildPhases = (
+				465EBB9E25D8A6950034ADF0 /* Sources */,
+				465EBB9F25D8A6950034ADF0 /* Frameworks */,
+				465EBBA025D8A6950034ADF0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				465EBBA825D8A6950034ADF0 /* PBXTargetDependency */,
+			);
+			name = MyFavouriteRecipesUITests;
+			productName = MyFavouriteRecipesUITests;
+			productReference = 465EBBA225D8A6950034ADF0 /* MyFavouriteRecipesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -325,6 +372,10 @@
 					};
 					465EBB2F25D865950034ADF0 = {
 						CreatedOnToolsVersion = 12.4;
+					};
+					465EBBA125D8A6950034ADF0 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 463F975825D0822A00327EF8;
 					};
 				};
 			};
@@ -344,6 +395,7 @@
 				463F975825D0822A00327EF8 /* MyFavouriteRecipes */,
 				465EBB2625D865940034ADF0 /* MyFavoriteRecipesWatch */,
 				465EBB2F25D865950034ADF0 /* MyFavoriteRecipesWatch Extension */,
+				465EBBA125D8A6950034ADF0 /* MyFavouriteRecipesUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -374,6 +426,13 @@
 			files = (
 				465EBB3F25D865950034ADF0 /* Preview Assets.xcassets in Resources */,
 				465EBB3C25D865950034ADF0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		465EBBA025D8A6950034ADF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +480,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		465EBB9E25D8A6950034ADF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				465EBBA525D8A6950034ADF0 /* MyFavouriteRecipesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -433,6 +500,11 @@
 			isa = PBXTargetDependency;
 			target = 465EBB2625D865940034ADF0 /* MyFavoriteRecipesWatch */;
 			targetProxy = 465EBB4125D865950034ADF0 /* PBXContainerItemProxy */;
+		};
+		465EBBA825D8A6950034ADF0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 463F975825D0822A00327EF8 /* MyFavouriteRecipes */;
+			targetProxy = 465EBBA725D8A6950034ADF0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -685,6 +757,44 @@
 			};
 			name = Release;
 		};
+		465EBBAA25D8A6950034ADF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 567K2BW2V9;
+				INFOPLIST_FILE = MyFavouriteRecipesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.studentool.ios.MyFavouriteRecipesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyFavouriteRecipes;
+			};
+			name = Debug;
+		};
+		465EBBAB25D8A6950034ADF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 567K2BW2V9;
+				INFOPLIST_FILE = MyFavouriteRecipesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.studentool.ios.MyFavouriteRecipesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyFavouriteRecipes;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -720,6 +830,15 @@
 			buildConfigurations = (
 				465EBB4525D865950034ADF0 /* Debug */,
 				465EBB4625D865950034ADF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		465EBBA925D8A6950034ADF0 /* Build configuration list for PBXNativeTarget "MyFavouriteRecipesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				465EBBAA25D8A6950034ADF0 /* Debug */,
+				465EBBAB25D8A6950034ADF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
