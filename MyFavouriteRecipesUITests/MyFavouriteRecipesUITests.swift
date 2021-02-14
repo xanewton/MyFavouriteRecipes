@@ -42,27 +42,24 @@ class MyFavouriteRecipesUITests: XCTestCase {
     } */
     
     
+    // Create an instance of the app
+    let app = XCUIApplication()
+    
     override func setUp() {
-        
+        app.launch()
     }
     
     // Note: Always start your functions with the word "test". This is how Xcode and XCTest are able to identify your tests.
     func testCanTapMapButton() {
-        let app = XCUIApplication()
-        app.launch()
         // app.buttons is a list of all the buttons available at the time.
         app.buttons["accessibility.map.button"].tap()
     }
     
     func testCanTapFilterButton() {
-        let app = XCUIApplication()
-        app.launch()
         app.buttons["accessibility.filter.button"].tap()
     }
         
     func testCanTapAddButton() {
-        let app = XCUIApplication()
-        app.launch()
         app.buttons["accessibility.add.button"].tap()
     }
 }
