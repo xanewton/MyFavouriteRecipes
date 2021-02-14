@@ -99,7 +99,7 @@ struct Helper {
         return annotations
     }
     
-    private static func getCoordinates(country: String) -> CLLocationCoordinate2D {
+    internal static func getCoordinates(country: String) -> CLLocationCoordinate2D {
         switch country {
             case "Italy":
                 return CLLocationCoordinate2D(latitude: 43.112221, longitude: 12.388889)

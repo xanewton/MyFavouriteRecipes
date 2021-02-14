@@ -6,10 +6,11 @@
 //
 
 import XCTest
+@testable import MyFavouriteRecipes
 
 class MyFavouriteRecipesTests: XCTestCase {
 
-    override func setUpWithError() throws {
+    /*override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
@@ -27,6 +28,25 @@ class MyFavouriteRecipesTests: XCTestCase {
         measure {
             // Put the code you want to measure the time of here.
         }
+    }*/
+    
+    override func setUp() {
+        
+    }
+
+    func testIfGetCountriesHasItems() {
+        // XCTAssertGreaterThan(Helper.getCountries().count, 0)
+        XCTAssertTrue(Helper.getCountries().count > 0)
+    }
+    
+    func testThatGetCoordinatesReturnsCorrectLatLon() {
+        let locationOne = Helper.getCoordinates(country: "Spain")
+        XCTAssertEqual(locationOne.latitude, 41.383)
+        XCTAssertEqual(locationOne.longitude, 2.183)
+            
+        let locationTwo = Helper.getCoordinates(country: "UK")
+        XCTAssertEqual(locationTwo.latitude, 53.483959)
+        XCTAssertEqual(locationTwo.longitude, -2.244644)
     }
 
 }
