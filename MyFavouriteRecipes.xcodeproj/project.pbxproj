@@ -38,6 +38,7 @@
 		465EBB8B25D87B550034ADF0 /* WatchHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465EBB8A25D87B540034ADF0 /* WatchHelper.swift */; };
 		465EBB9025D881DE0034ADF0 /* ViewModelWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465EBB8F25D881DE0034ADF0 /* ViewModelWatch.swift */; };
 		465EBBA525D8A6950034ADF0 /* MyFavouriteRecipesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465EBBA425D8A6950034ADF0 /* MyFavouriteRecipesUITests.swift */; };
+		465EBBB725D8AED50034ADF0 /* MyFavouriteRecipesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465EBBB625D8AED50034ADF0 /* MyFavouriteRecipesTests.swift */; };
 		4682A81625D75B3700063F63 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4682A81525D75B3700063F63 /* ContentView.swift */; };
 		4682A81925D75B7F00063F63 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4682A81825D75B7F00063F63 /* WelcomeView.swift */; };
 		46D0203D25D1F0A800AF34F5 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D0203C25D1F0A800AF34F5 /* RecipeDetailView.swift */; };
@@ -62,6 +63,13 @@
 			remoteInfo = MyFavoriteRecipesWatch;
 		};
 		465EBBA725D8A6950034ADF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 463F975125D0822A00327EF8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 463F975825D0822A00327EF8;
+			remoteInfo = MyFavouriteRecipes;
+		};
+		465EBBB925D8AED50034ADF0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 463F975125D0822A00327EF8 /* Project object */;
 			proxyType = 1;
@@ -130,6 +138,9 @@
 		465EBBA225D8A6950034ADF0 /* MyFavouriteRecipesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyFavouriteRecipesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		465EBBA425D8A6950034ADF0 /* MyFavouriteRecipesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavouriteRecipesUITests.swift; sourceTree = "<group>"; };
 		465EBBA625D8A6950034ADF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		465EBBB425D8AED50034ADF0 /* MyFavouriteRecipesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyFavouriteRecipesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		465EBBB625D8AED50034ADF0 /* MyFavouriteRecipesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavouriteRecipesTests.swift; sourceTree = "<group>"; };
+		465EBBB825D8AED50034ADF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4682A81525D75B3700063F63 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4682A81825D75B7F00063F63 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		46D0203C25D1F0A800AF34F5 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
@@ -160,6 +171,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		465EBBB125D8AED50034ADF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -172,6 +190,7 @@
 				465EBB2825D865940034ADF0 /* MyFavoriteRecipesWatch */,
 				465EBB3425D865950034ADF0 /* MyFavoriteRecipesWatch Extension */,
 				465EBBA325D8A6950034ADF0 /* MyFavouriteRecipesUITests */,
+				465EBBB525D8AED50034ADF0 /* MyFavouriteRecipesTests */,
 				463F975A25D0822A00327EF8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -183,6 +202,7 @@
 				465EBB2725D865940034ADF0 /* MyFavoriteRecipesWatch.app */,
 				465EBB3025D865950034ADF0 /* MyFavoriteRecipesWatch Extension.appex */,
 				465EBBA225D8A6950034ADF0 /* MyFavouriteRecipesUITests.xctest */,
+				465EBBB425D8AED50034ADF0 /* MyFavouriteRecipesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -281,6 +301,15 @@
 			path = MyFavouriteRecipesUITests;
 			sourceTree = "<group>";
 		};
+		465EBBB525D8AED50034ADF0 /* MyFavouriteRecipesTests */ = {
+			isa = PBXGroup;
+			children = (
+				465EBBB625D8AED50034ADF0 /* MyFavouriteRecipesTests.swift */,
+				465EBBB825D8AED50034ADF0 /* Info.plist */,
+			);
+			path = MyFavouriteRecipesTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -355,6 +384,24 @@
 			productReference = 465EBBA225D8A6950034ADF0 /* MyFavouriteRecipesUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		465EBBB325D8AED50034ADF0 /* MyFavouriteRecipesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 465EBBBB25D8AED50034ADF0 /* Build configuration list for PBXNativeTarget "MyFavouriteRecipesTests" */;
+			buildPhases = (
+				465EBBB025D8AED50034ADF0 /* Sources */,
+				465EBBB125D8AED50034ADF0 /* Frameworks */,
+				465EBBB225D8AED50034ADF0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				465EBBBA25D8AED50034ADF0 /* PBXTargetDependency */,
+			);
+			name = MyFavouriteRecipesTests;
+			productName = MyFavouriteRecipesTests;
+			productReference = 465EBBB425D8AED50034ADF0 /* MyFavouriteRecipesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -377,6 +424,10 @@
 						CreatedOnToolsVersion = 12.4;
 						TestTargetID = 463F975825D0822A00327EF8;
 					};
+					465EBBB325D8AED50034ADF0 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 463F975825D0822A00327EF8;
+					};
 				};
 			};
 			buildConfigurationList = 463F975425D0822A00327EF8 /* Build configuration list for PBXProject "MyFavouriteRecipes" */;
@@ -396,6 +447,7 @@
 				465EBB2625D865940034ADF0 /* MyFavoriteRecipesWatch */,
 				465EBB2F25D865950034ADF0 /* MyFavoriteRecipesWatch Extension */,
 				465EBBA125D8A6950034ADF0 /* MyFavouriteRecipesUITests */,
+				465EBBB325D8AED50034ADF0 /* MyFavouriteRecipesTests */,
 			);
 		};
 /* End PBXProject section */
@@ -430,6 +482,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		465EBBA025D8A6950034ADF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		465EBBB225D8AED50034ADF0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -488,6 +547,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		465EBBB025D8AED50034ADF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				465EBBB725D8AED50034ADF0 /* MyFavouriteRecipesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -505,6 +572,11 @@
 			isa = PBXTargetDependency;
 			target = 463F975825D0822A00327EF8 /* MyFavouriteRecipes */;
 			targetProxy = 465EBBA725D8A6950034ADF0 /* PBXContainerItemProxy */;
+		};
+		465EBBBA25D8AED50034ADF0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 463F975825D0822A00327EF8 /* MyFavouriteRecipes */;
+			targetProxy = 465EBBB925D8AED50034ADF0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -795,6 +867,46 @@
 			};
 			name = Release;
 		};
+		465EBBBC25D8AED50034ADF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 567K2BW2V9;
+				INFOPLIST_FILE = MyFavouriteRecipesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.studentool.ios.MyFavouriteRecipesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyFavouriteRecipes.app/MyFavouriteRecipes";
+			};
+			name = Debug;
+		};
+		465EBBBD25D8AED50034ADF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 567K2BW2V9;
+				INFOPLIST_FILE = MyFavouriteRecipesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.studentool.ios.MyFavouriteRecipesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyFavouriteRecipes.app/MyFavouriteRecipes";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -839,6 +951,15 @@
 			buildConfigurations = (
 				465EBBAA25D8A6950034ADF0 /* Debug */,
 				465EBBAB25D8A6950034ADF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		465EBBBB25D8AED50034ADF0 /* Build configuration list for PBXNativeTarget "MyFavouriteRecipesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				465EBBBC25D8AED50034ADF0 /* Debug */,
+				465EBBBD25D8AED50034ADF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
